@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Auth from "../auth/Auth";
 import styled from "styled-components";
-import logovinci from "../image/VCF.bmp";
+import logovinci from "../image/VCF blanc.jpg";
 import { FcSettings } from "react-icons/fc";
 
 const HEADER = styled.div`
@@ -31,8 +31,8 @@ const HEADER = styled.div`
   }
 
   .logo-header {
-    height: 50px;
-    width: 250px;
+    height: 60px;
+    width: 350px;
     margin: 0;
     padding: 20px;
   }
@@ -49,12 +49,14 @@ const HEADER = styled.div`
     background-color: #1a3478;
     margin-bottom: 20px;
     float: left;
+    border-radius:5px;
   }
   .second-line {
     width: 29%;
     height: 15px;
     background-color: #5cbed3;
     float: right;
+    border-radius:5px;
   }
 `;
 
