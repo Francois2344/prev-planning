@@ -57,14 +57,14 @@ const HEADER = styled.div`
     background-color: #1a3478;
     margin-bottom: 20px;
     float: left;
-    border-radius:5px;
+    border-radius: 5px;
   }
   .second-line {
     width: 29%;
     height: 15px;
     background-color: #5cbed3;
     float: right;
-    border-radius:5px;
+    border-radius: 5px;
   }
 `;
 
@@ -92,7 +92,7 @@ const Header = () => {
         </div>
         <Switch>
           <Route path="/" />
-          <Route path="/auth" component={Auth} />
+          <Route path="/auth" components={Auth} />
         </Switch>
       </HEADER>
     </Router>
