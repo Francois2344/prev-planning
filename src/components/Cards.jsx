@@ -1,78 +1,104 @@
-import React from 'react';
-import styled from 'styled-components'
-import avatar1 from '../image/avatar-1.png'
+import React from "react";
+import styled from "styled-components";
+import avatar1 from "../image/avatar-1.png";
 
 const CARD = styled.div`
-width: 15%;
-display: flex;
-flex-direction: column;
-border-radius:3px;
-box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.30);
-border: solid 1px rgba(0, 0, 0, 0.08);
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 3px;
+  box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.3);
+  border: solid 1px rgba(0, 0, 0, 0.08);
 
-.profile {
-    width:100px;
-    height:100px;
+  .profile {
+    width: 100px;
+    height: 100px;
     margin-top: 25px;
     border-radius: 50%;
-    box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.20);
-}
+    box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.2);
+  }
 
-.person {
+  .person {
     padding: 10px;
     background-color: #a8a8a8;
     margin: auto;
-}
+  }
 
-h4 {
+  h4 {
     display: flex;
     margin: 15px;
-    color: #0049f5;
-}
+  }
 
-.table {
+  h5 {
+    margin: 0px;
+  }
+  .objectif-title {
+    background-color: #49d5e7;
+    color: #ffffff;
+  }
+
+  .realise-title {
+    background-color:#494FE7;
+    color: #ffffff;
+  }
+
+  .objectif-section {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 10px;
-    border-top: 2px solid grey;
-    border-bottom: 2px solid grey;
-    text-color:
-}
+    border-top: 2px solid #49d5e7;
+    text-color: ;
+  }
+  .realise-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-top: 2px solid #494FE7;
+    text-color: ;
+  }
 
-.color1 {
-    margin: 5px;
-    color: #04f117;
-}
-.color2 {
-    margin: 5px;
-    color: #029c0f;
-}
-.color3 {
+  p {
+    padding-left: 20px
+  }
+
+  .color1 {
     margin: 5px;
     color: #fc2ccb;
-}
-
+  }
+  .color2 {
+    margin: 5px;
+    color: #04f117;
+  }
+  .color3 {
+    margin: 5px;
+    color: #029c0f;
+  }
 `;
 
-
 const Cards = () => {
-    return (
-        <CARD>
-            <div class="card-container">
-                <h3 className='person'>Nom  Prénom</h3>
-                <div className='picture'>
-                    <img className='profile' src={avatar1} alt='' />
-                </div>
-                <h4 class='title'>Ouverture:</h4>
-                <table className='table'>
-                <th class='color1'>Vert clair:</th>
-                <th class='color2'>Vert foncé:</th>
-                <th class='color3'>Rose:</th>
-                </table>
-            </div>
-        </CARD>
-    );
-}
+  return (
+    <CARD>
+      <div class="card-container">
+        <h3 className="person">Nom Prénom</h3>
+        <div className="picture">
+          <img className="profile" src={avatar1} alt="" />
+        </div>
+        <h4 class="title">Demi journée travaillées:</h4>
+        <div className="objectif-section">
+          <h5 className="objectif-title">Objectif:</h5>
+          <p class="color1">Aléas:</p>
+          <p class="color2">Actions Terrain:</p>
+          <p class="color3">Actions Agence:</p>
+        </div>
+        <div className="realise-section">
+          <h5 className="realise-title">Réalisé:</h5>
+          <p class="color1">Aléas:</p>
+          <p class="color2">Actions Terrain:</p>
+          <p class="color3">Actions Agence:</p>
+        </div>
+      </div>
+    </CARD>
+  );
+};
 
 export default Cards;
