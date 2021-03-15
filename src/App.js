@@ -1,10 +1,10 @@
-import Cards from './components/Cards'
+import Headers from './components/Header'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Cards />
+      <Headers />
     </div>
   );
 }
