@@ -1,13 +1,10 @@
-import Headers from './components/Header'
-import Cards from './components/Cards'
+import Table from './view/table'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Headers />
-      <Cards />
-      <Cards />
+      <Table />
     </div>
   );
 }
