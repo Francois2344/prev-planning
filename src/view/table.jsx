@@ -1,3 +1,4 @@
+
 import React, { useMemo } from "react";
 import { useTable } from "react-table";
 import { COLUMNS } from "../components/table-components/Columns";
@@ -67,4 +68,3 @@ function Prevention() {
   );
 }
 
-export default Prevention;

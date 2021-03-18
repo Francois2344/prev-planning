@@ -2,8 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
 import Auth from "../auth/Auth";
 import styled from "styled-components";
-import logovinci from "../image/VCF.bmp";
-import { FcSettings } from "react-icons/fc";
+import logovinci from "../image/VCF blanc.jpg";
+import { FcSettings, FcHome } from "react-icons/fc";
 
 const HEADER = styled.div`
   font-family: Baloo;
@@ -22,7 +22,15 @@ const HEADER = styled.div`
   }
 
   .icon-link-setting {
-    height: 5em;
+    height: 5.8em;
+  }
+
+  .icon-home {
+    margin-left: 53em;
+  }
+
+  .icon-link-home {
+    height: 5.8em;
   }
 
   .head-display {
@@ -31,8 +39,8 @@ const HEADER = styled.div`
   }
 
   .logo-header {
-    height: 50px;
-    width: 250px;
+    height: 60px;
+    width: 350px;
     margin: 0;
     padding: 20px;
   }
@@ -49,12 +57,14 @@ const HEADER = styled.div`
     background-color: #1a3478;
     margin-bottom: 20px;
     float: left;
+    border-radius: 5px;
   }
   .second-line {
     width: 29%;
     height: 15px;
     background-color: #5cbed3;
     float: right;
+    border-radius: 5px;
   }
 `;
 
@@ -64,6 +74,11 @@ const Header = () => {
       <HEADER>
         <div className="head-display">
           <h1 className="main-title">Pilotage Prévention</h1>
+          <div className="icon-home">
+            <Link to="/">
+              <FcHome className="icon-link-home" size={40} />
+            </Link>
+          </div>
           <div className="icon-link">
             <Link to="/auth">
               <FcSettings className="icon-link-setting" size={40} />
@@ -76,7 +91,8 @@ const Header = () => {
           <div className="second-line" />
         </div>
         <Switch>
-          <Route path="/auth" component={Auth} />
+          <Route path="/" />
+          <Route path="/auth" components={Auth} />
         </Switch>
       </HEADER>
     </Router>
