@@ -1,10 +1,10 @@
-import Table from './view/table'
+import Auth from './auth/Auth'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <Table />
+      <Auth />
     </div>
   );
 }

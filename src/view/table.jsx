@@ -21,7 +21,7 @@ function Prevention() {
   return (
     <div>
       <table {...getTableProps()} style={{ border: "solid 1px lightgrey",
-    width: '200%' }}>
+    width: '100%' }}>
         <thead>
           {headerGroups.map((headerGroup) => (
             <tr {...headerGroup.getHeaderGroupProps()}>
@@ -51,7 +51,7 @@ function Prevention() {
                       {...cell.getCellProps()}
                       style={{
                         border: "solid 1px gray",
-                        height: '100px'
+                        height: '50px'
                       }}
                     >
                       {cell.render("Cell")}

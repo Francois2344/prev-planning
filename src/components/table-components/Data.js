@@ -1,8 +1,8 @@
 export const DATA = [
     {
-        col1: 'test',
+        col1: <input type='text' />,
     },
     {
-        col2:''
+        col2:'test'
     }
 ]
