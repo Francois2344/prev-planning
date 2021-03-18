@@ -1,12 +1,12 @@
-import Headers from './components/Header'
+
+import Auth from './auth/Auth'
 import './App.css';
-import Cards from './components/Cards';
+
 
 function App() {
   return (
     <div className="App">
-      <Headers />
-      <Cards />
+      <Auth />
     </div>
   );
 }
