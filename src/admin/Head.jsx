@@ -43,7 +43,7 @@ background-color:  #C4C4C4;
 }
 `;
 
-const head = () => {
+const Head = () => {
     return (
         <DIV className='head-admin'>
             <div className="logo-admin">
@@ -57,4 +57,4 @@ const head = () => {
     );
 };
 
-export default head;
+export default Head;
