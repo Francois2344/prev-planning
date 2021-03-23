@@ -1,12 +1,12 @@
 
-import Auth from './auth/Auth'
+import Head from './admin/Head'
 import './App.css';
 
 
 function App() {
   return (
     <div className="App">
-      <Auth />
+      <Head />
     </div>
   );
 }
