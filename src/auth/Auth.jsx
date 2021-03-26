@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-one-expression-per-line */
 import React, { useState } from 'react';
 import LoginForm from './LoginForm';
 import './StyleAuth.css';
@@ -40,7 +39,8 @@ const Auth = () => {
       {user.email !== '' ? (
         <div className="welcome">
           <h2>
-            Bienvenue, <span>{user.name}</span>
+            Bienvenue,
+            <span>{user.name}</span>
           </h2>
           <button type="submit">Deconnexion</button>
         </div>
