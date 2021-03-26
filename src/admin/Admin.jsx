@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../admin/StyleAdmin.css';
 
 const Admin = () => {
   const [newPrev, setNewPrev] = useState({ firstname: "", lastname: "" });
@@ -7,8 +8,8 @@ const Admin = () => {
     //Axios.post
   };
   return (
-    <form>
-      <div className="form-new-prev">
+    <form className="form-newprev">
+      <div className="new-prev">
         <h2 className="title-new-prev">Nouveau Préventeur</h2>
         <input
           type="text"
@@ -16,7 +17,9 @@ const Admin = () => {
           className="input-firstname"
           name="text"
           placeholder="Nom"
-          onChange={(e) =>setNewPrev ({...newPrev, firstname:e.target.value})}
+          onChange={(e) =>
+            setNewPrev({ ...newPrev, firstname: e.target.value })
+          }
         />
         <input
           type="text"
@@ -24,9 +27,11 @@ const Admin = () => {
           className="input-lastname"
           name="text"
           placeholder="Prénom"
-          onChange={(e) =>setNewPrev ({...newPrev, lastname:e.target.value})}
+          onChange={(e) => setNewPrev({ ...newPrev, lastname: e.target.value })}
         />
-        <button type="submit" onClick={handleSubmit}>Ajouter</button>
+        <button type="submit" onClick={handleSubmit}>
+          Ajouter
+        </button>
       </div>
     </form>
     /*map à appliquer Axios.get

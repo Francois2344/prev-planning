@@ -1,0 +1,57 @@
+* {
+  font-family: montserrat, sans-serif;
+}
+.new-prev {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 200px;
+}
+
+.title-new-prev {
+  margin-left: 70px;
+  color: #1a3478;
+  font-weight: 600;
+  font-size: large;
+  width: 100%;
+}
+
+input {
+  appearance: none;
+  background: none;
+  outline: none;
+  height: 40px;
+  width: 25em;
+  margin-top: 10px;
+  color: #1a3478;
+  font-weight: bold;
+  border-radius: 8px;
+}
+
+button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  margin-left: 90px;
+  width: 150px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background-image: linear-gradient(
+    to right,
+    #00206b 50%,
+    #00206b 50%,
+    #d40000
+  );
+  background-size: 200%;
+  background-position: 0%;
+  transition: 0.4s;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-position: 100% 0%;
+}
