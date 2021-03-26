@@ -1,6 +1,6 @@
-import React from "react";
-import styled from "styled-components";
-import avatar1 from "../image/avatar-1.png";
+import React from 'react';
+import styled from 'styled-components';
+import avatar1 from '../image/avatar-1.png';
 
 const CARD = styled.div`
   width: 20%;
@@ -38,7 +38,7 @@ const CARD = styled.div`
   }
 
   .realise-title {
-    background-color:#494FE7;
+    background-color: #494fe7;
     color: #ffffff;
   }
 
@@ -53,12 +53,12 @@ const CARD = styled.div`
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    border-top: 2px solid #494FE7;
+    border-top: 2px solid #494fe7;
     text-color: ;
   }
 
   p {
-    padding-left: 20px
+    padding-left: 20px;
   }
 
   .color1 {
@@ -78,23 +78,23 @@ const CARD = styled.div`
 const Cards = () => {
   return (
     <CARD>
-      <div class="card-container">
+      <div className="card-container">
         <h3 className="person">Nom Prénom</h3>
         <div className="picture">
           <img className="profile" src={avatar1} alt="" />
         </div>
-        <h4 class="title">Demi journée travaillées:</h4>
+        <h4 className="title">Demi journée travaillées:</h4>
         <div className="objectif-section">
           <h5 className="objectif-title">Objectif:</h5>
-          <p class="color1">Aléas:</p>
-          <p class="color2">Actions Terrain:</p>
-          <p class="color3">Actions Agence:</p>
+          <p className="color1">Aléas:</p>
+          <p className="color2">Actions Terrain:</p>
+          <p className="color3">Actions Agence:</p>
         </div>
         <div className="realise-section">
           <h5 className="realise-title">Réalisé:</h5>
-          <p class="color1">Aléas:</p>
-          <p class="color2">Actions Terrain:</p>
-          <p class="color3">Actions Agence:</p>
+          <p className="color1">Aléas:</p>
+          <p className="color2">Actions Terrain:</p>
+          <p className="color3">Actions Agence:</p>
         </div>
       </div>
     </CARD>

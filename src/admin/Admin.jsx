@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import '../admin/StyleAdmin.css';
+import React, { useState } from 'react';
+import './StyleAdmin.css';
 
 const Admin = () => {
-  const [newPrev, setNewPrev] = useState({ firstname: "", lastname: "" });
+  const [newPrev, setNewPrev] = useState({ firstname: '', lastname: '' });
   const handleSubmit = (e) => {
     e.preventDefault();
-    //Axios.post
+    // Axios.post
   };
   return (
     <form className="form-newprev">
@@ -18,8 +18,8 @@ const Admin = () => {
           name="text"
           placeholder="Nom"
           onChange={(e) =>
-            setNewPrev({ ...newPrev, firstname: e.target.value })
-          }
+            // eslint-disable-next-line prettier/prettier
+            setNewPrev({ ...newPrev, firstname: e.target.value })}
         />
         <input
           type="text"
@@ -34,10 +34,10 @@ const Admin = () => {
         </button>
       </div>
     </form>
-    /*map à appliquer Axios.get
+    /* map à appliquer Axios.get
         <div className="preventer-list">
             <h3>Les Préventeurs</h3>
-        </div>*/
+        </div> */
   );
 };
 
