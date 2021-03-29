@@ -1,33 +1,42 @@
 import React, { useState } from "react";
-import '../admin/StyleAdmin.css';
+import "../admin/StyleAdmin.css";
+import PostNewPrev from "../service/axios/PostNewPrev";
 
 const Admin = () => {
-  const [newPrev, setNewPrev] = useState({ firstname: "", lastname: "" });
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    //Axios.post
+  const [firstname, setFirstName] = useState("");
+  const [lastname, setLastName] = useState("");
+
+  const handleFirstName = (event) => {
+    setFirstName(event.target.value);
   };
+
+  const handleLastName = (event) => {
+    setLastName(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    PostNewPrev({setFirstName, setLastName})
+  }
   return (
     <form className="form-newprev">
       <div className="new-prev">
         <h2 className="title-new-prev">Nouveau Préventeur</h2>
         <input
           type="text"
-          value={newPrev.firstname}
+          value={firstname}
           className="input-firstname"
           name="text"
           placeholder="Nom"
-          onChange={(e) =>
-            setNewPrev({ ...newPrev, firstname: e.target.value })
-          }
+          onChange={handleFirstName}
         />
         <input
           type="text"
-          value={newPrev.lastname}
+          value={lastname}
           className="input-lastname"
           name="text"
           placeholder="Prénom"
-          onChange={(e) => setNewPrev({ ...newPrev, lastname: e.target.value })}
+          onChange={handleLastName}
         />
         <button type="submit" onClick={handleSubmit}>
           Ajouter
