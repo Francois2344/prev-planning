@@ -1,7 +1,7 @@
-import React from "react";
-import Admin from "./admin/Admin";
-import Head from "./admin/Head";
-import "./App.css";
+import React from 'react';
+import Admin from './admin/Admin';
+import Head from './admin/Head';
+import './App.css';
 
 const App = () => {
   return (
