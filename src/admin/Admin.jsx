@@ -43,10 +43,10 @@ const Admin = () => {
         </button>
       </div>
     </form>
-    /*map à appliquer Axios.get
+    /* map à appliquer Axios.get
         <div className="preventer-list">
             <h3>Les Préventeurs</h3>
-        </div>*/
+        </div> */
   );
 };
 
