@@ -1,3 +1,5 @@
+/* Style du formulaire "Nouveau Préventeur" */
+
 * {
   font-family: montserrat, sans-serif;
 }
@@ -54,4 +56,46 @@ button {
 
 button:hover {
   background-position: 100% 0%;
+}
+/*________________________________________________________________________________________________________/*
+
+/* Mise en forme de la liste des Preventeurs */
+.preventer-list {
+  margin-left: 50px;
+}
+
+.list-prev {
+  display: flex;
+  justify-content: flex-start;
+}
+
+h3 {
+  display: flex;
+  justify-content: flex-start;
+  width: 150px;
+  margin-top: 60px;
+  margin-left: 30px;
+  color: #00206b;
+}
+
+.list-items {
+  display: flex;
+  flex-direction: row;
+}
+
+li {
+  list-style:square;
+  padding-bottom: 20px;
+  color: #00206b;
+  margin-left: 5px;
+  padding-top: 10px;
+  font-weight: 600;
+}
+.item-2 {
+  list-style: none;
+}
+
+.delete-prev {
+  margin: auto;
+  margin-left: 25px;
 }

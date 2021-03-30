@@ -15,7 +15,9 @@
     "rules": {
       "indent": ["error", 2],
       "linebreak-style": ["error", "unix"],
-      "react/jsx-props-no-spreading": "off"
+      "react/jsx-props-no-spreading": "off",
+      "react/jsx-filename-extension": [0],
+      "import/extensions": "off" 
     },
     "settings": {
       "import/resolver": {
