@@ -18,6 +18,7 @@ const PostNewPrev = ({setFirstName, setLastName}) => {
     .then((response) => {
       console.log(response.data);
       setFirstName()
+      setLastName()
     })
     .catch((error) => console.error(error));
 };
