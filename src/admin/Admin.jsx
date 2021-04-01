@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './StyleAdmin.css';
+import Hazard from './Hazard';
 
 const Admin = () => {
   const [firstname, setFirstName] = useState('');
@@ -101,6 +102,7 @@ const Admin = () => {
           );
         })}
       </div>
+      <Hazard />
     </div>
   );
 };
