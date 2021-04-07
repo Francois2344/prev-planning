@@ -102,7 +102,7 @@ li {
 /*________________________________________________________________________________________________________*/
 /* Style Input Select Aléas */
 
-.form-hazard {
+.form-admin {
   width: 100px;
   display: flex;
   flex-direction: row;
@@ -110,62 +110,14 @@ li {
 .hazard-title {
   margin-left: 150px;
 }
-
-.add-hazard {
-  width: 160px;
-  height: 30px;
-  margin:auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  border-radius: 5px;
-  font-weight: bold;
-}
-.form-hazard-input{
-  display: flex;
-  flex-direction: column;
-  margin-left: 90px;
-}
-
-select {
-  border-radius: 10px;
-  width: 200px;
-  margin:auto;
-  height: 40px;
-  color:#00206b;
-  font-weight: bold;
-}
-
-label {
-  color:  #00206b;
-  font-weight: bold;
-}
-
-option {
-  color:  #00206b;
-  font-weight: bold;
-
-}
-
-.post-hazard {
-margin:auto;
-margin-bottom: 5px;
-}
-.delete-hazard {
-  margin: auto;
-}
-/*________________________________________________________________________________________________________*/
-/* Style Input Select Action Agence */
-
-.form-agency {
-  width: 100px;
-  display: flex;
-  flex-direction: row;
-}
 .agency-title {
   margin-left: 120px;
 }
+.site-title {
+  margin-left: 120px;
+}
 
-.add-agency {
+.add-input {
   width: 160px;
   height: 30px;
   margin:auto;
@@ -174,7 +126,7 @@ margin-bottom: 5px;
   border-radius: 5px;
   font-weight: bold;
 }
-.form-agency-input{
+.form-admin-input{
   display: flex;
   flex-direction: column;
   margin-left: 90px;
@@ -200,11 +152,10 @@ option {
 
 }
 
-.post-agency {
+.post-input {
 margin:auto;
 margin-bottom: 5px;
 }
-.delete-agency {
+.delete-input {
   margin: auto;
 }
-/*________________________________________________________________________________________________________*/
