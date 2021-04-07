@@ -1,6 +1,8 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Hazard from './Hazard';
+import Agency from './Agency';
 import './StyleAdmin.css';
 
 const Admin = () => {
@@ -101,6 +103,8 @@ const Admin = () => {
           );
         })}
       </div>
+      <Hazard />
+      <Agency />
     </div>
   );
 };

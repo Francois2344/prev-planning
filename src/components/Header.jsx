@@ -1,9 +1,9 @@
-import React from "react";
-import { BrowserRouter as Router, Link, Switch, Route } from "react-router-dom";
-import Auth from "../auth/Auth";
-import styled from "styled-components";
-import logovinci from "../image/VCF blanc.jpg";
-import { FcSettings, FcHome } from "react-icons/fc";
+import React from 'react';
+import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
+import styled from 'styled-components';
+import { FcSettings, FcHome } from 'react-icons/fc';
+import Auth from '../auth/Auth';
+import logovinci from '../image/VCF blanc.jpg';
 
 const HEADER = styled.div`
   font-family: Baloo;
