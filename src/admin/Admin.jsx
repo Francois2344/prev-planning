@@ -1,8 +1,8 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import './StyleAdmin.css';
 import Hazard from './Hazard';
+import './StyleAdmin.css';
 
 const Admin = () => {
   const [firstname, setFirstName] = useState('');

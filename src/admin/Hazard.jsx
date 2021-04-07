@@ -5,9 +5,14 @@ import React, { useEffect, useState } from 'react';
 const Hazard = () => {
   const [hazardName, setHazardName] = useState('');
   const [hazardList, setHazardList] = useState([]);
+  const [aleasName, setAleasName] = useState('');
 
   const handleChangeHazard = (event) => {
     setHazardName(event.target.value);
+  };
+
+  const handleChangeAlesName = (event) => {
+    setAleasName(event.target.value);
   };
 
   useEffect(() => {
@@ -19,12 +24,12 @@ const Hazard = () => {
 
   const handleAddHazard = (event) => {
     event.preventDefault();
-    const postHazard = 'http://localhost:8000/hazards/add';
+    const postUrl = 'http://localhost:8000/hazards/add';
     axios
       .post(
-        postHazard,
+        postUrl,
         {
-          hazardName,
+          hazardName: aleasName,
         },
         {
           headers: {
@@ -34,8 +39,16 @@ const Hazard = () => {
       )
       .then((response) => {
         console.log(response.data);
+        window.location.reload();
       })
       .catch((error) => console.error(error));
+  };
+
+  const deleteHazard = () => {
+    const removeId = hazardList.find((item) => item.hazardName === hazardName);
+    const urlDelete = `http://localhost:8000/hazards/${removeId._id}`;
+    axios.delete(urlDelete).then((response) => response.data);
+    window.location.reload().catch((error) => console.error(error));
   };
 
   return (
@@ -49,25 +62,30 @@ const Hazard = () => {
             className="aleas-select"
             value={hazardName}
           >
-            {hazardList.map((val) => (
-              <option key={val._id} value={val.hazardName}>
-                {val.hazardName}
-              </option>
-            ))}
+            {hazardList.map((val) => {
+              return <option key={val._id}>{val.hazardName}</option>;
+            })}
           </select>
           <input
             className="add-hazard"
             type="text"
             name="text"
-            value={hazardName}
-            onChange={handleChangeHazard}
+            value={aleasName}
+            onChange={handleChangeAlesName}
           />
           <button
             className="post-hazard"
-            type="button"
+            type="submit"
             onClick={handleAddHazard}
           >
             Ajouter
+          </button>
+          <button
+            className="delete-hazard"
+            type="button"
+            onClick={deleteHazard}
+          >
+            Supprimer
           </button>
         </div>
       </form>

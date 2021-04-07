@@ -111,7 +111,7 @@ li {
 }
 
 .add-hazard {
-  width: 150px;
+  width: 160px;
   height: 30px;
   margin:auto;
   margin-top: 10px;
@@ -122,12 +122,13 @@ li {
 .form-hazard-input{
   display: flex;
   flex-direction: column;
-  margin-left: 100px;
+  margin-left: 90px;
 }
 
 select {
   border-radius: 10px;
-  width: 170px;
+  width: 200px;
+  margin:auto;
   height: 40px;
   color:#00206b;
   font-weight: bold;
@@ -146,4 +147,8 @@ option {
 
 .post-hazard {
 margin:auto;
+margin-bottom: 5px;
+}
+.delete-hazard {
+  margin: auto;
 }
