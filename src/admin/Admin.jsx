@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Hazard from './Hazard';
 import Agency from './Agency';
+import Site from './Site';
 import './StyleAdmin.css';
 
 const Admin = () => {
@@ -105,6 +106,7 @@ const Admin = () => {
       </div>
       <Hazard />
       <Agency />
+      <Site />
     </div>
   );
 };

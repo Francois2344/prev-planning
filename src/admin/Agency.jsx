@@ -56,8 +56,8 @@ const Agency = () => {
   return (
     <div className="input-select">
       <h3 className="agency-title">Actions Agence</h3>
-      <form className="form-agency">
-        <div className="form-agency-input">
+      <form className="form-admin">
+        <div className="form-admin-input">
           <select
             onChange={handleChangeAgency}
             name="Action Agence"
@@ -69,24 +69,20 @@ const Agency = () => {
             })}
           </select>
           <input
-            className="add-agency"
+            className="add-input"
             type="text"
             name="text"
             value={agName}
             onChange={handleChangeAgName}
           />
           <button
-            className="post-agency"
+            className="post-input"
             type="submit"
             onClick={handleAddAgency}
           >
             Ajouter
           </button>
-          <button
-            className="delete-agency"
-            type="button"
-            onClick={deleteAgency}
-          >
+          <button className="delete-input" type="button" onClick={deleteAgency}>
             Supprimer
           </button>
         </div>

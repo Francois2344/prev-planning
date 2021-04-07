@@ -54,8 +54,8 @@ const Hazard = () => {
   return (
     <div className="input-select">
       <h3 className="hazard-title">Aléas</h3>
-      <form className="form-hazard">
-        <div className="form-hazard-input">
+      <form className="form-admin">
+        <div className="form-admin-input">
           <select
             onChange={handleChangeHazard}
             name="Aléas"
@@ -67,24 +67,20 @@ const Hazard = () => {
             })}
           </select>
           <input
-            className="add-hazard"
+            className="add-input"
             type="text"
             name="text"
             value={aleasName}
             onChange={handleChangeAlesName}
           />
           <button
-            className="post-hazard"
+            className="post-input"
             type="submit"
             onClick={handleAddHazard}
           >
             Ajouter
           </button>
-          <button
-            className="delete-hazard"
-            type="button"
-            onClick={deleteHazard}
-          >
+          <button className="delete-input" type="button" onClick={deleteHazard}>
             Supprimer
           </button>
         </div>
