@@ -116,6 +116,9 @@ li {
 .site-title {
   margin-left: 120px;
 }
+.other-title {
+  margin-left: 150px;
+}
 
 .add-input {
   width: 160px;
@@ -158,4 +161,8 @@ margin-bottom: 5px;
 }
 .delete-input {
   margin: auto;
+}
+
+@media screen {
+  
 }

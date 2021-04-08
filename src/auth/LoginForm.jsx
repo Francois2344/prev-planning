@@ -1,9 +1,11 @@
-import React, { useState } from "react";
-import logovinci from "../image/VCF couleur.jpg"
-
+/* eslint-disable react/jsx-curly-newline */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+import React, { useState } from 'react';
+import Proptypes from 'prop-types';
+import logovinci from '../image/VCF couleur.jpg';
 
 const LoginForm = ({ Login, error }) => {
-  const [details, setDetails] = useState({ name: "", email: "", password: "" });
+  const [details, setDetails] = useState({ name: '', email: '', password: '' });
   const handleSubmit = (e) => {
     e.preventDefault();
     Login(details);
@@ -11,9 +13,9 @@ const LoginForm = ({ Login, error }) => {
   return (
     <form onSubmit={handleSubmit}>
       <div className="form-inner">
-      <img className="logo-auth" src={logovinci} alt="" />
+        <img className="logo-auth" src={logovinci} alt="" />
         <h2>Identification</h2>
-        {error !== "" ? <div className="error">{error}</div> : ""}
+        {error !== '' ? <div className="error">{error}</div> : ''}
         <div className="form-group">
           <label htmlFor="name">Prénom :</label>
           <input
@@ -50,6 +52,10 @@ const LoginForm = ({ Login, error }) => {
       </div>
     </form>
   );
+};
+LoginForm.propTypes = {
+  Login: Proptypes.string.isRequired,
+  error: Proptypes.string.isRequired,
 };
 
 export default LoginForm;

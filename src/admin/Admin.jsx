@@ -4,6 +4,7 @@ import axios from 'axios';
 import Hazard from './Hazard';
 import Agency from './Agency';
 import Site from './Site';
+import Other from './Other';
 import './StyleAdmin.css';
 
 const Admin = () => {
@@ -107,6 +108,7 @@ const Admin = () => {
       <Hazard />
       <Agency />
       <Site />
+      <Other />
     </div>
   );
 };
