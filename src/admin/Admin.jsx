@@ -59,56 +59,60 @@ const Admin = () => {
 
   return (
     <div>
-      <form className="form-newprev">
-        <div className="new-prev">
-          <h2 className="title-new-prev">Nouveau Préventeur</h2>
-          <input
-            type="text"
-            value={firstname}
-            className="input-firstname"
-            name="text"
-            placeholder="Prénom"
-            onChange={handleFirstName}
-          />
-          <input
-            type="text"
-            value={lastname}
-            className="input-lastname"
-            name="text"
-            placeholder="Nom"
-            onChange={handleLastName}
-          />
-          <button type="submit" onClick={handleSubmit}>
-            Ajouter
-          </button>
+      <div className="block-new-prev">
+        <form className="form-newprev">
+          <div className="new-prev">
+            <h2 className="title-new-prev">Nouveau Préventeur</h2>
+            <input
+              type="text"
+              value={firstname}
+              className="input-firstname"
+              name="text"
+              placeholder="Prénom"
+              onChange={handleFirstName}
+            />
+            <input
+              type="text"
+              value={lastname}
+              className="input-lastname"
+              name="text"
+              placeholder="Nom"
+              onChange={handleLastName}
+            />
+            <button type="submit" onClick={handleSubmit}>
+              Ajouter
+            </button>
+          </div>
+        </form>
+        <div className="preventer-list">
+          <h3>Les Préventeurs</h3>
+          {listPrev.map((val) => {
+            return (
+              <div className="list-prev">
+                <div key={val._id} className="list-items">
+                  <li className="item-1">{val.firstname}</li>
+                  <li className="item-2">{val.lastname}</li>
+                </div>
+                <div className="remove-button">
+                  <button
+                    type="button"
+                    className="delete-prev"
+                    onClick={() => deletePreventer(val._id)}
+                  >
+                    Supprimer
+                  </button>
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </form>
-      <div className="preventer-list">
-        <h3>Les Préventeurs</h3>
-        {listPrev.map((val) => {
-          return (
-            <div className="list-prev">
-              <div key={val._id} className="list-items">
-                <li className="item-1">{val.firstname}</li>
-                <li className="item-2">{val.lastname}</li>
-              </div>
-              <div className="remove-button">
-                <button
-                  type="button"
-                  className="delete-prev"
-                  onClick={() => deletePreventer(val._id)}
-                >
-                  Supprimer
-                </button>
-              </div>
-            </div>
-          );
-        })}
       </div>
-      <Hazard />
-      <Agency />
-      <Site />
-      <Other />
+      <div className="block-input">
+        <Agency />
+        <Site />
+        <Hazard />
+        <Other />
+      </div>
     </div>
   );
 };
