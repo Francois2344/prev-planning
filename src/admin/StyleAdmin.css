@@ -84,7 +84,7 @@ h3 {
 }
 
 li {
-  list-style:square;
+  list-style: square;
   padding-bottom: 20px;
   color: #00206b;
   margin-left: 5px;
@@ -100,7 +100,7 @@ li {
   margin-left: 25px;
 }
 /*________________________________________________________________________________________________________*/
-/* Style Input Select Aléas */
+/* Style Input Select Aleas, Action Terrain et Agence, Autres */
 
 .form-admin {
   width: 100px;
@@ -123,13 +123,13 @@ li {
 .add-input {
   width: 160px;
   height: 30px;
-  margin:auto;
+  margin: auto;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 5px;
   font-weight: bold;
 }
-.form-admin-input{
+.form-admin-input {
   display: flex;
   flex-direction: column;
   margin-left: 90px;
@@ -138,31 +138,53 @@ li {
 select {
   border-radius: 10px;
   width: 200px;
-  margin:auto;
+  margin: auto;
   height: 40px;
-  color:#00206b;
+  color: #00206b;
   font-weight: bold;
+  cursor: pointer;
 }
 
 label {
-  color:  #00206b;
+  color: #00206b;
   font-weight: bold;
 }
 
 option {
-  color:  #00206b;
+  color: #00206b;
   font-weight: bold;
-
 }
 
 .post-input {
-margin:auto;
-margin-bottom: 5px;
+  margin: auto;
+  margin-bottom: 5px;
 }
 .delete-input {
   margin: auto;
 }
 
-@media screen {
-  
+/* Media Query pour Desktop*/
+
+@media screen and (min-width: 768px) {
+  .block-input {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    margin: 20px;
+    margin-top:2rem;
+    box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+    -webkit-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+    -moz-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+    border-radius: 20px;
+  }
+  .block-new-prev {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    height: 25rem;
+    border-radius: 20px;
+    box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+    -webkit-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+    -moz-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+  }
 }
