@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import { FcSettings, FcHome } from 'react-icons/fc';
-import Auth from '../auth/Auth';
+import Admin from '../admin/Admin';
 import logovinci from '../image/VCF blanc.jpg';
 
 const HEADER = styled.div`
@@ -39,7 +39,7 @@ const HEADER = styled.div`
   }
 
   .logo-header {
-    height: 60px;
+    height: 100px;
     width: 350px;
     margin: 0;
     padding: 20px;
@@ -80,7 +80,7 @@ const Header = () => {
             </Link>
           </div>
           <div className="icon-link">
-            <Link to="/auth">
+            <Link to="/admin">
               <FcSettings className="icon-link-setting" size={40} />
             </Link>
           </div>
@@ -92,7 +92,7 @@ const Header = () => {
         </div>
         <Switch>
           <Route path="/" />
-          <Route path="/auth" components={Auth} />
+          <Route path="/admin" components={Admin} />
         </Switch>
       </HEADER>
     </Router>

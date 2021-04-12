@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-export const DATA = [
+const DATA = [
   {
     col1: 'test',
   },
@@ -7,3 +6,5 @@ export const DATA = [
     col2: 'test',
   },
 ];
+
+export default DATA;
