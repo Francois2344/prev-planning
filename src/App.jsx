@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
-import TablePrev from './components/TablePrev';
+import TablePrev from './view/TablePrev';
 import Header from './components/Header';
-import Admin from './admin/Admin';
 import Cards from './components/Cards';
 import Container from './components/Container';
 import Context from './service/PrevContext';
 
 const App = () => {
-  const [prevName, setPrevName] = useState([]);
+  const [prevName, setPrevName] = useState();
 
   useEffect(() => {
     const urlGetPrev = 'http://localhost:8000/users';
     axios.get(urlGetPrev).then((response) => {
-      setPrevName(response.data[0]);
+      setPrevName(response.data);
     });
   }, []);
 
@@ -27,7 +26,6 @@ const App = () => {
         </Context.Provider>
         <Cards />
       </Container>
-      <Admin />
     </div>
   );
 };
