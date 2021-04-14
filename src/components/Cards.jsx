@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import avatar1 from '../image/avatar-1.png';
 
 const CARD = styled.div`
-  width: 20%;
+  width: 15em;
   display: flex;
   flex-direction: column;
   border-radius: 3px;
@@ -11,8 +11,8 @@ const CARD = styled.div`
   border: solid 1px rgba(0, 0, 0, 0.08);
 
   .profile {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     margin-top: 25px;
     border-radius: 50%;
     box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.2);
@@ -22,11 +22,13 @@ const CARD = styled.div`
     padding: 10px;
     background-color: #a8a8a8;
     margin: auto;
+    font-size: 13px;
   }
 
   h4 {
     display: flex;
     margin: 15px;
+    font-size: 10px;
   }
 
   h5 {
@@ -35,11 +37,13 @@ const CARD = styled.div`
   .objectif-title {
     background-color: #49d5e7;
     color: #ffffff;
+    font-size: 10px;
   }
 
   .realise-title {
     background-color: #494fe7;
     color: #ffffff;
+    font-size: 10px;
   }
 
   .objectif-section {
@@ -48,6 +52,7 @@ const CARD = styled.div`
     align-items: flex-start;
     border-top: 2px solid #49d5e7;
     text-color: ;
+    font-size: 10px;
   }
   .realise-section {
     display: flex;
@@ -55,6 +60,7 @@ const CARD = styled.div`
     align-items: flex-start;
     border-top: 2px solid #494fe7;
     text-color: ;
+    font-size: 10px;
   }
 
   p {

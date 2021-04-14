@@ -1,24 +1,24 @@
-import axios from "axios";
+import axios from 'axios';
 
-const PostNewPrev = ({setFirstName, setLastName}) => {
+const PostNewPrev = ({ setFirstName, setLastName }) => {
   axios
     .post(
-      "http://localhost:8000/users/add",
+      'http://localhost:8000/users/add',
       {
-        firstname: "firstname",
-        lastname: "lastname",
+        firstname: 'firstname',
+        lastname: 'lastname',
       },
       {
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
       }
     )
 
     .then((response) => {
       console.log(response.data);
-      setFirstName()
-      setLastName()
+      setFirstName();
+      setLastName();
     })
     .catch((error) => console.error(error));
 };

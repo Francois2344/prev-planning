@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-export const COLUMNS = [
+const COLUMNS = [
   {
     Header: '1',
     accessor: 'day 1',
@@ -109,3 +108,4 @@ export const COLUMNS = [
     accessor: 'day 31',
   },
 ];
+export default COLUMNS;

@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import Head from './Head';
 import Hazard from './Hazard';
 import Agency from './Agency';
 import Site from './Site';
@@ -59,6 +60,7 @@ const Admin = () => {
 
   return (
     <div>
+      <Head />
       <div className="block-new-prev">
         <form className="form-newprev">
           <div className="new-prev">
