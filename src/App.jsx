@@ -16,7 +16,6 @@ const App = () => {
       setPrevName(response.data);
     });
   }, []);
-
   return (
     <div className="App">
       <Header />
