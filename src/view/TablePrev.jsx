@@ -2,7 +2,7 @@
 import React, { useContext } from 'react';
 import { Table } from 'react-bootstrap';
 import PrevContext from '../service/PrevContext';
-import '../components/StylePlanning.css';
+import './StylePlanning.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import COLUMNS from '../components/table-components/Columns';
 import DataCell from '../components/table-components/DataCell';

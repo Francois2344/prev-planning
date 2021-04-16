@@ -4,10 +4,8 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const COLOR = styled.div`
-  td {
-    height: 40px;
-    width: 40px;
-  }
+  height: 100%;
+  width: 100%;
 `;
 
 const CellColor = () => {
