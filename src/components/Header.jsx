@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
 import { FcSettings, FcHome } from 'react-icons/fc';
 import Admin from '../admin/Admin';
+import Auth from '../auth/Auth';
 import logovinci from '../image/VCF blanc.jpg';
 
 const HEADER = styled.div`
@@ -93,6 +94,7 @@ const Header = () => {
         <Switch>
           <Route path="/" />
           <Route path="/admin" components={Admin} />
+          <Route path="/auth" component={Auth} />
         </Switch>
       </HEADER>
     </Router>

@@ -3,7 +3,6 @@ import axios from 'axios';
 import './App.css';
 import TablePrev from './view/TablePrev';
 import Header from './components/Header';
-import Cards from './components/Cards';
 import Container from './components/Container';
 import Context from './service/PrevContext';
 
@@ -23,7 +22,6 @@ const App = () => {
         <Context.Provider value={{ prevName }}>
           {prevName && <TablePrev />}
         </Context.Provider>
-        <Cards />
       </Container>
     </div>
   );

@@ -4,8 +4,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const COLOR = styled.div`
-  height: 100%;
-  width: 100%;
+  td {
+    width: 150px;
+  }
 `;
 
 const CellColor = () => {
@@ -39,6 +40,7 @@ const CellColor = () => {
   return (
     <COLOR className="cell-color">
       <td
+        className="cell-click"
         role="presentation"
         style={{ backgroundColor: cellColor }}
         onClick={(e) => handleColor(e.target.style.backgroundColor)}
