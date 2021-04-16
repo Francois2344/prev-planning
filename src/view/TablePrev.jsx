@@ -22,9 +22,9 @@ const TablePrev = () => {
           </tr>
           <tr className="row1">
             <td>Preventeur</td>
-            {COLUMNS.map((i) => (
-              <td key={i.accessor} value={i.Header}>
-                {i.Header}
+            {COLUMNS.map((ic) => (
+              <td key={ic.accessor} value={ic.Header}>
+                {ic.Header}
               </td>
             ))}
           </tr>
@@ -42,15 +42,21 @@ const TablePrev = () => {
                 {i.lastname}
               </th>
               {DataCell.map((id) => (
-                <td key={id.key} value={id.col} className="column1">
+                <td key={id.key} value={(id.col, id.col1)} className="column1">
                   {id.col}
+                  {id.col1}
                 </td>
               ))}
             </tr>
             <tr className="row1">
               {DataCell.map((item) => (
-                <td key={item.key} value={item.col} className="column2">
+                <td
+                  key={item.key}
+                  value={(item.col, item.col1)}
+                  className="column2"
+                >
                   {item.col}
+                  {item.col1}
                 </td>
               ))}
             </tr>
