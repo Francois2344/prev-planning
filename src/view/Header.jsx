@@ -1,9 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { FcSettings, FcHome } from 'react-icons/fc';
+import { BsTable } from 'react-icons/bs';
+// eslint-disable-next-line no-unused-vars
 import Admin from '../admin/Admin';
-import Auth from '../auth/Auth';
+
 import logovinci from '../image/VCF blanc.jpg';
 
 const HEADER = styled.div`
@@ -16,22 +18,6 @@ const HEADER = styled.div`
 
   .main-title {
     margin-left: 5rem;
-  }
-
-  .icon-link {
-    margin-left: auto;
-  }
-
-  .icon-link-setting {
-    height: 5.8em;
-  }
-
-  .icon-home {
-    margin-left: 53em;
-  }
-
-  .icon-link-home {
-    height: 5.8em;
   }
 
   .head-display {
@@ -51,7 +37,17 @@ const HEADER = styled.div`
     justify-content: space-between;
     margin: 0;
   }
-
+  .nav-icon {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  .icon-home {
+    margin-right: 10px;
+  }
+  .icon-table {
+    margin-right: 10px;
+  }
   .first-line {
     width: 70%;
     height: 15px;
@@ -71,33 +67,33 @@ const HEADER = styled.div`
 
 const Header = () => {
   return (
-    <Router>
-      <HEADER>
-        <div className="head-display">
-          <h1 className="main-title">Pilotage Prévention</h1>
+    <HEADER>
+      <div className="head-display">
+        <h1 className="main-title">Pilotage Prévention</h1>
+        <div className="nav-icon">
           <div className="icon-home">
-            <Link to="/">
+            <Link to="/home">
               <FcHome className="icon-link-home" size={40} />
             </Link>
           </div>
+          <div className="icon-table">
+            <Link to="table">
+              <BsTable className="icon-link-table" size={40} />
+            </Link>
+          </div>
           <div className="icon-link">
-            <Link to="/admin">
+            <Link to="/auth">
               <FcSettings className="icon-link-setting" size={40} />
             </Link>
           </div>
-          <img className="logo-header" src={logovinci} alt="" />
         </div>
-        <div className="main-line">
-          <div className="first-line" />
-          <div className="second-line" />
-        </div>
-        <Switch>
-          <Route path="/" />
-          <Route path="/admin" components={Admin} />
-          <Route path="/auth" component={Auth} />
-        </Switch>
-      </HEADER>
-    </Router>
+        <img className="logo-header" src={logovinci} alt="" />
+      </div>
+      <div className="main-line">
+        <div className="first-line" />
+        <div className="second-line" />
+      </div>
+    </HEADER>
   );
 };
 

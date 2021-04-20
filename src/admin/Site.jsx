@@ -41,14 +41,14 @@ const Site = () => {
         console.log(response.data);
         window.location.reload();
       })
-      .catch((error) => console.error(error));
+      .catch((error) => error(error));
   };
 
   const deleteSite = () => {
     const removeIdSite = siteList.find((item) => item.siteName === siteName);
     const urlDelete = `http://localhost:8000/sites/${removeIdSite._id}`;
     axios.delete(urlDelete).then((response) => response.data);
-    window.location.reload().catch((error) => console.error(error));
+    window.location.reload().catch((error) => error(error));
   };
 
   return (

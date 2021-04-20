@@ -54,7 +54,7 @@ const LoginForm = ({ Login, error }) => {
   );
 };
 LoginForm.propTypes = {
-  Login: Proptypes.string.isRequired,
+  Login: Proptypes.func.isRequired,
   error: Proptypes.string.isRequired,
 };
 
