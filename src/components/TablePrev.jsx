@@ -4,8 +4,8 @@ import { Table } from 'react-bootstrap';
 import PrevContext from '../service/PrevContext';
 import './StylePlanning.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import COLUMNS from '../components/table-components/Columns';
-import DataCell from '../components/table-components/DataCell';
+import COLUMNS from './table-components/Columns';
+import DataCell from './table-components/DataCell';
 
 const TablePrev = () => {
   const { prevName } = useContext(PrevContext);

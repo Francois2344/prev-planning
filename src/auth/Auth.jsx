@@ -12,22 +12,21 @@ const Auth = () => {
   const [error, setError] = useState('');
 
   const Login = (details) => {
-    console.log(details);
     if (
       details.email === adminUser.email &&
       details.password === adminUser.password
     ) {
-      console.log('Logged In');
+      alert('Logged In');
       setUser({ name: details.name, email: details.email });
     } else {
-      console.log('try again');
+      alert('try again');
       setError('try again');
     }
   };
 
   // eslint-disable-next-line no-unused-vars
   const Logout = () => {
-    console.log('Logout');
+    alert('Logout');
     setUser({
       name: '',
       email: '',

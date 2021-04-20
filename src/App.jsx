@@ -1,29 +1,23 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Auth from './auth/Auth';
+import Container from './Layout/Container';
+import VinciHome from './view/VinciHome';
+import Home from './view/MainTable';
 import './App.css';
-import TablePrev from './view/TablePrev';
-import Header from './components/Header';
-import Container from './components/Container';
-import Context from './service/PrevContext';
 
 const App = () => {
-  const [prevName, setPrevName] = useState();
-
-  useEffect(() => {
-    const urlGetPrev = 'http://localhost:8000/users';
-    axios.get(urlGetPrev).then((response) => {
-      setPrevName(response.data);
-    });
-  }, []);
   return (
-    <div className="App">
-      <Header />
-      <Container>
-        <Context.Provider value={{ prevName }}>
-          {prevName && <TablePrev />}
-        </Context.Provider>
-      </Container>
-    </div>
+    <Router>
+      <div className="App">
+        <Container />
+      </div>
+      <Switch>
+        <Route exact path="/home" component={VinciHome} />
+        <Route path="/auth" component={Auth} />
+        <Route path="/table" component={Home} />
+      </Switch>
+    </Router>
   );
 };
 
