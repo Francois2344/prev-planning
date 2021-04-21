@@ -3,7 +3,7 @@ import axios from 'axios';
 import Context from '../service/PrevContext';
 import TablePrev from '../components/TablePrev';
 
-const Home = () => {
+const MainTable = () => {
   const [prevName, setPrevName] = useState();
 
   useEffect(() => {
@@ -12,7 +12,6 @@ const Home = () => {
       setPrevName(response.data);
     });
   }, []);
-  console.log(prevName);
   return (
     <div className="App">
       <Context.Provider value={{ prevName }}>
@@ -22,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default MainTable;

@@ -72,7 +72,7 @@ const Header = () => {
         <h1 className="main-title">Pilotage Prévention</h1>
         <div className="nav-icon">
           <div className="icon-home">
-            <Link to="/home">
+            <Link to="/">
               <FcHome className="icon-link-home" size={40} />
             </Link>
           </div>
