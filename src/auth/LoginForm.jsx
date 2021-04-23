@@ -1,39 +1,52 @@
 /* eslint-disable react/jsx-curly-newline */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
-import Proptypes from 'prop-types';
+import React, { useState, useContext } from 'react';
+import axios from 'axios';
+import { useHistory } from 'react-router-dom';
 import logovinci from '../image/VCF couleur.jpg';
+import AuthContext from '../service/AuthContext';
+import './AuthStyle.css';
 
-const LoginForm = ({ Login, error }) => {
-  const [details, setDetails] = useState({ name: '', email: '', password: '' });
-  const handleSubmit = (e) => {
+const LoginForm = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const { getLoggedIn } = useContext(AuthContext);
+  const history = useHistory;
+
+  async function loginAuth(e) {
     e.preventDefault();
-    Login(details);
-  };
+    try {
+      const loginData = {
+        email,
+        password,
+      };
+
+      await axios.post('http://localhost:8000/register/login', loginData, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      getLoggedIn();
+      history.push('/');
+      window.location.reload();
+    } catch (err) {
+      console.error(err);
+    }
+  }
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="login-form" onSubmit={loginAuth}>
       <div className="form-inner">
         <img className="logo-auth" src={logovinci} alt="" />
         <h2>Identification</h2>
-        {error !== '' ? <div className="error">{error}</div> : ''}
-        <div className="form-group">
-          <label htmlFor="name">Prénom :</label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            onChange={(e) => setDetails({ ...details, name: e.target.value })}
-            value={details.name}
-          />
-        </div>
         <div className="form-group">
           <label htmlFor="name">E-mail :</label>
           <input
             type="text"
             email="email"
             id="email"
-            onChange={(e) => setDetails({ ...details, email: e.target.value })}
-            value={details.email}
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
           />
         </div>
         <div className="form-group">
@@ -42,20 +55,14 @@ const LoginForm = ({ Login, error }) => {
             type="password"
             password="password"
             id="password"
-            onChange={(e) =>
-              setDetails({ ...details, password: e.target.value })
-            }
-            value={details.password}
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
           />
         </div>
         <input type="submit" value="LOGIN" />
       </div>
     </form>
   );
-};
-LoginForm.propTypes = {
-  Login: Proptypes.func.isRequired,
-  error: Proptypes.string.isRequired,
 };
 
 export default LoginForm;

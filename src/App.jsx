@@ -1,23 +1,16 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Auth from './auth/Auth';
-import Container from './Layout/Container';
-import VinciHome from './view/VinciHome';
-import MainTable from './view/MainTable';
+import axios from 'axios';
 import './App.css';
+import { AuthContextProvider } from './service/AuthContext';
+import Router from './Router';
+
+axios.defaults.withCredentials = true;
 
 const App = () => {
   return (
-    <Router>
-      <div className="App">
-        <Container />
-      </div>
-      <Switch>
-        <Route path="/table" component={MainTable} />
-        <Route path="/auth" component={Auth} />
-        <Route path="/" component={VinciHome} />
-      </Switch>
-    </Router>
+    <AuthContextProvider>
+      <Router />
+    </AuthContextProvider>
   );
 };
 

@@ -1,33 +1,38 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { FcSettings, FcHome } from 'react-icons/fc';
 import { BsTable } from 'react-icons/bs';
+import { GrUserAdmin } from 'react-icons/gr';
+import { IoPersonAdd } from 'react-icons/io5';
 // eslint-disable-next-line no-unused-vars
 import Admin from '../admin/Admin';
 
 import logovinci from '../image/VCF blanc.jpg';
+import AuthContext from '../service/AuthContext';
+import LogOutBtn from '../auth/LogOutBtn';
 
 const HEADER = styled.div`
   font-family: Baloo;
   font-style: normal;
   font-weight: normal;
-  font-size: 100%;
   text-align: start;
   color: #5cbed3;
 
   .main-title {
-    margin-left: 5rem;
+    margin-top: 15px;
   }
 
   .head-display {
     display: flex;
     justify-content: space-between;
+    width: 100%;
   }
 
   .logo-header {
     height: 100px;
-    width: 350px;
+    width: 150px;
     margin: 0;
     padding: 20px;
   }
@@ -41,12 +46,6 @@ const HEADER = styled.div`
     display: flex;
     justify-content: center;
     padding: 20px;
-  }
-  .icon-home {
-    margin-right: 10px;
-  }
-  .icon-table {
-    margin-right: 10px;
   }
   .first-line {
     width: 70%;
@@ -66,26 +65,37 @@ const HEADER = styled.div`
 `;
 
 const Header = () => {
+  const { loggedIn } = useContext(AuthContext);
+
   return (
     <HEADER>
       <div className="head-display">
         <h1 className="main-title">Pilotage Prévention</h1>
         <div className="nav-icon">
-          <div className="icon-home">
-            <Link to="/">
-              <FcHome className="icon-link-home" size={40} />
-            </Link>
-          </div>
-          <div className="icon-table">
-            <Link to="table">
-              <BsTable className="icon-link-table" size={40} />
-            </Link>
-          </div>
-          <div className="icon-link">
-            <Link to="/auth">
-              <FcSettings className="icon-link-setting" size={40} />
-            </Link>
-          </div>
+          <Link to="/">
+            <FcHome className="icon-link-home" size={40} />
+          </Link>
+          <Link to="table">
+            <BsTable className="icon-link-table" size={40} />
+          </Link>
+          {loggedIn === false && (
+            <>
+              <Link to="/login">
+                <FcSettings className="icon-link-login" size={40} />
+              </Link>
+              <Link to="/register">
+                <IoPersonAdd className="icon-link-register" size={40} />
+              </Link>
+            </>
+          )}
+          {loggedIn === true && (
+            <>
+              <Link to="/admin">
+                <GrUserAdmin className="icon-link-home" size={40} />
+              </Link>
+              <LogOutBtn />
+            </>
+          )}
         </div>
         <img className="logo-header" src={logovinci} alt="" />
       </div>

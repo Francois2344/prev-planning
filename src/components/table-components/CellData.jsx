@@ -27,9 +27,9 @@ const CellData = () => {
       setDataAgency(response.data);
     });
   }, []);
-  useEffect(() => {
+  useEffect(async () => {
     const urlHazard = 'http://localhost:8000/others';
-    axios.get(urlHazard).then((response) => {
+    await axios.get(urlHazard).then((response) => {
       setDataOther(response.data);
     });
   }, []);
