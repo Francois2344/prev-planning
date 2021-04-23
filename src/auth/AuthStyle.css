@@ -1,0 +1,19 @@
+.form-inner {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.logo-auth {
+    align-self: center;
+    margin: 20px;
+    width: 15rem;
+    height:4rem;
+}
+.form-group {
+    align-self: center;
+}
+
+h2 {
+    align-self: center;
+    color:#00206b;
+}

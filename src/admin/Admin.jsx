@@ -6,7 +6,7 @@ import Hazard from './Hazard';
 import Agency from './Agency';
 import Site from './Site';
 import Other from './Other';
-import './StyleAdmin.css';
+import './AdminStyle.css';
 
 const Admin = () => {
   const [firstname, setFirstName] = useState('');
@@ -47,7 +47,7 @@ const Admin = () => {
         window.location.reload();
         console.log(response.data);
       })
-      .catch((error) => error(error));
+      .catch((error) => console.error(error));
   };
 
   const deletePreventer = (id) => {
@@ -55,7 +55,7 @@ const Admin = () => {
     axios
       .delete(url + id)
       .then((response) => response.data, window.location.reload())
-      .catch((error) => error(error));
+      .catch((error) => console.error(error));
   };
 
   return (

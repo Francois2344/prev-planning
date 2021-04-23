@@ -45,7 +45,9 @@ const Other = () => {
   };
 
   const deleteOther = () => {
-    const removeIdOther = otherList.find((item) => item.siteName === otherName);
+    const removeIdOther = otherList.find(
+      (item) => item.otherName === otherName
+    );
     const urlDelete = `http://localhost:8000/others/${removeIdOther._id}`;
     axios.delete(urlDelete).then((response) => response.data);
     window.location.reload().catch((error) => console.error(error));

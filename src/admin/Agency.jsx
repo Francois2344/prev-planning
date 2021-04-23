@@ -24,7 +24,7 @@ const Agency = () => {
 
   const handleAddAgency = (event) => {
     event.preventDefault();
-    const postUrl = 'http://localhost:8000/hazards/add';
+    const postUrl = 'http://localhost:8000/agencies/add';
     axios
       .post(
         postUrl,
@@ -41,7 +41,7 @@ const Agency = () => {
         console.log(response.data);
         window.location.reload();
       })
-      .catch((error) => error(error));
+      .catch((error) => console.error(error));
   };
 
   const deleteAgency = () => {
@@ -50,7 +50,7 @@ const Agency = () => {
     );
     const urlDelete = `http://localhost:8000/agencies/${removeIdAg._id}`;
     axios.delete(urlDelete).then((response) => response.data);
-    window.location.reload().catch((error) => error(error));
+    window.location.reload().catch((error) => console.error(error));
   };
 
   return (
