@@ -13,7 +13,7 @@ const MainTable = () => {
     });
   }, []);
   return (
-    <div className="App">
+    <div className="Main-Table">
       <Context.Provider value={{ prevName }}>
         {prevName && <TablePrev />}
       </Context.Provider>

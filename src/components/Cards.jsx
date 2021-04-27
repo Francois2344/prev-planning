@@ -1,14 +1,20 @@
-import React from 'react';
+/* eslint-disable no-underscore-dangle */
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import avatar1 from '../image/avatar-1.png';
+import ContextCard from '../service/CardContext';
 
 const CARD = styled.div`
-  width: 15em;
-  display: flex;
-  flex-direction: column;
+  width: 15%;
+  margin: 15px;
   border-radius: 3px;
   box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.3);
   border: solid 1px rgba(0, 0, 0, 0.08);
+
+  .picture {
+    display flex;
+    justify-content: center;
+  }
 
   .profile {
     width: 60px;
@@ -82,28 +88,42 @@ const CARD = styled.div`
 `;
 
 const Cards = () => {
+  const { prevName } = useContext(ContextCard);
+  const { firstname, lastname } = prevName;
+
   return (
-    <CARD>
-      <div className="card-container">
-        <h3 className="person">Nom Prénom</h3>
-        <div className="picture">
-          <img className="profile" src={avatar1} alt="" />
-        </div>
-        <h4 className="title">Demi journée travaillées:</h4>
-        <div className="objectif-section">
-          <h5 className="objectif-title">Objectif:</h5>
-          <p className="color1">Aléas:</p>
-          <p className="color2">Actions Terrain:</p>
-          <p className="color3">Actions Agence:</p>
-        </div>
-        <div className="realise-section">
-          <h5 className="realise-title">Réalisé:</h5>
-          <p className="color1">Aléas:</p>
-          <p className="color2">Actions Terrain:</p>
-          <p className="color3">Actions Agence:</p>
-        </div>
-      </div>
-    </CARD>
+    <div className="block-card-prev" style={{ display: 'flex' }}>
+      {prevName.map((key) => (
+        <CARD>
+          <div
+            key={key._id}
+            value={(firstname, lastname)}
+            className="card-container"
+          >
+            <h3 className="person">
+              {key.firstname}
+              {key.lastname}
+            </h3>
+            <div className="picture">
+              <img className="profile" src={avatar1} alt="" />
+            </div>
+            <h4 className="title">Demi journée travaillées:</h4>
+            <div className="objectif-section">
+              <h5 className="objectif-title">Objectif:</h5>
+              <p className="color1">Aléas:</p>
+              <p className="color2">Actions Terrain:</p>
+              <p className="color3">Actions Agence:</p>
+            </div>
+            <div className="realise-section">
+              <h5 className="realise-title">Réalisé:</h5>
+              <p className="color1">Aléas:</p>
+              <p className="color2">Actions Terrain:</p>
+              <p className="color3">Actions Agence:</p>
+            </div>
+          </div>
+        </CARD>
+      ))}
+    </div>
   );
 };
 
