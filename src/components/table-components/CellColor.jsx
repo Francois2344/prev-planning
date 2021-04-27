@@ -1,6 +1,6 @@
 /* eslint-disable indent */
 /* eslint-disable no-nested-ternary */
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const COLOR = styled.div`
@@ -16,7 +16,7 @@ const CellColor = () => {
   const orange = '#FFA419';
   const white = '#FFFFFF';
 
-  const [cellColor, setCellColor] = useState({
+  const [cellColorData, setCellColorData] = useState({
     darkgreen,
     lightgreen,
     orange,
@@ -24,25 +24,36 @@ const CellColor = () => {
   });
 
   const handleColor = () => {
-    setCellColor(
-      cellColor === white
+    setCellColorData(
+      cellColorData === white
         ? lightgreen
-        : cellColor === lightgreen
+        : cellColorData === lightgreen
         ? pink
-        : cellColor === pink
+        : cellColorData === pink
         ? orange
-        : cellColor === orange
+        : cellColorData === orange
         ? darkgreen
         : white
     );
   };
+  useEffect(() => {
+    const Data = localStorage.getItem(Date('key'));
+    setCellColorData(JSON.parse(Data));
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem(
+      Date('key'),
+      JSON.stringify(darkgreen, pink, lightgreen, orange)
+    );
+  });
 
   return (
     <COLOR className="cell-color">
       <td
         className="cell-click"
         role="presentation"
-        style={{ backgroundColor: cellColor }}
+        style={{ backgroundColor: cellColorData }}
         onClick={(e) => handleColor(e.target.style.backgroundColor)}
       />
     </COLOR>

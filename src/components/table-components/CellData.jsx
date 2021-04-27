@@ -15,29 +15,38 @@ const CellData = () => {
   const [dataOther, setDataOther] = useState([]);
   const [dataSite, setDataSite] = useState([]);
 
-  useEffect(() => {
+  const fetchDataOne = async () => {
     const urlHazard = 'http://localhost:8000/hazards';
-    axios.get(urlHazard).then((response) => {
+    await axios.get(urlHazard).then((response) => {
       setDataHazard(response.data);
     });
-  }, []);
-  useEffect(() => {
-    const urlHazard = 'http://localhost:8000/agencies';
-    axios.get(urlHazard).then((response) => {
+  };
+
+  const fetchDataTwo = async () => {
+    const urlAgencies = 'http://localhost:8000/agencies';
+    await axios.get(urlAgencies).then((response) => {
       setDataAgency(response.data);
     });
-  }, []);
-  useEffect(async () => {
-    const urlHazard = 'http://localhost:8000/others';
-    await axios.get(urlHazard).then((response) => {
+  };
+
+  const fetchDataThree = async () => {
+    const urlOther = 'http://localhost:8000/others';
+    await axios.get(urlOther).then((response) => {
       setDataOther(response.data);
     });
-  }, []);
-  useEffect(() => {
-    const urlHazard = 'http://localhost:8000/sites';
-    axios.get(urlHazard).then((response) => {
+  };
+  const fetchDataFour = async () => {
+    const urlSite = 'http://localhost:8000/sites';
+    await axios.get(urlSite).then((response) => {
       setDataSite(response.data);
     });
+  };
+
+  useEffect(() => {
+    fetchDataOne();
+    fetchDataTwo();
+    fetchDataThree();
+    fetchDataFour();
   }, []);
 
   return (
@@ -47,9 +56,9 @@ const CellData = () => {
           <option disabled selected value>
             -- --
           </option>
-          {dataSite.map((si) => (
-            <option key={si._id} value={si.siteName}>
-              {si.siteName}
+          {dataSite.map((i) => (
+            <option key={i._id} value={i.siteName}>
+              {i.siteName}
             </option>
           ))}
         </optgroup>

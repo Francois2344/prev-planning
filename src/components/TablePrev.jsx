@@ -5,7 +5,7 @@ import PrevContext from '../service/PrevContext';
 import './StylePlanning.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import COLUMNS from './table-components/Columns';
-import DataCell from './table-components/DataCell';
+import DATA from './table-components/DataCell';
 
 const TablePrev = () => {
   const { prevName } = useContext(PrevContext);
@@ -22,9 +22,9 @@ const TablePrev = () => {
           </tr>
           <tr className="row1">
             <td>Preventeur</td>
-            {COLUMNS.map((ic) => (
-              <td key={ic.accessor} value={ic.Header}>
-                {ic.Header}
+            {COLUMNS.map((i) => (
+              <td key={i.accessor} value={i.Header}>
+                {i.Header}
               </td>
             ))}
           </tr>
@@ -41,7 +41,7 @@ const TablePrev = () => {
                 {i.firstname}
                 {i.lastname}
               </th>
-              {DataCell.map((id) => (
+              {DATA.map((id) => (
                 <td key={id.key} value={(id.col, id.col1)} className="column1">
                   {id.col}
                   {id.col1}
@@ -49,7 +49,7 @@ const TablePrev = () => {
               ))}
             </tr>
             <tr className="row1">
-              {DataCell.map((item) => (
+              {DATA.map((item) => (
                 <td
                   key={item.key}
                   value={(item.col, item.col1)}
