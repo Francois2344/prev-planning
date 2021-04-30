@@ -36,16 +36,14 @@ const CellColor = () => {
         : white
     );
   };
+
   useEffect(() => {
-    const Data = localStorage.getItem(Date('key'));
+    const Data = localStorage.getItem('cellColorData');
     setCellColorData(JSON.parse(Data));
   }, []);
 
   useEffect(() => {
-    localStorage.setItem(
-      Date('key'),
-      JSON.stringify(darkgreen, pink, lightgreen, orange)
-    );
+    localStorage.setItem('cellColorData', JSON.stringify(cellColorData));
   });
 
   return (

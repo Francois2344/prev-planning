@@ -2,13 +2,9 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FcSettings, FcHome } from 'react-icons/fc';
+import { FcSettings, FcHome, FcKey } from 'react-icons/fc';
 import { BsTable } from 'react-icons/bs';
-import { GrUserAdmin } from 'react-icons/gr';
 import { IoPersonAdd } from 'react-icons/io5';
-// eslint-disable-next-line no-unused-vars
-import Admin from '../admin/Admin';
-
 import logovinci from '../image/VCF blanc.jpg';
 import AuthContext from '../service/AuthContext';
 import LogOutBtn from '../auth/LogOutBtn';
@@ -31,20 +27,33 @@ const HEADER = styled.div`
   }
 
   .logo-header {
-    height: 100px;
+    height: 50px;
     width: 150px;
     margin: 0;
-    padding: 20px;
   }
-
+  .icon-link-home {
+    margin-right: 30px;
+  }
+  .icon-link-table {
+    margin-right: 30px;
+  }
+  .icon-link-login {
+    margin-right: 30px;
+  }
+  .icon-link-register {
+    margin-right: 30px;
+  }
+  .icon-link-logout {
+    margin-right: 30px;
+    color: 'skyblue';
+  }
   .main-line {
     display: flex;
     justify-content: space-between;
     margin: 0;
   }
   .nav-icon {
-    display: flex;
-    justify-content: center;
+    display: grid;
     padding: 20px;
   }
   .first-line {
@@ -62,6 +71,16 @@ const HEADER = styled.div`
     float: right;
     border-radius: 5px;
   }
+  @media screen and (min-width: 768px) {
+    .logo-header {
+      height: 120px;
+      width: 330px;
+      margin: 0;
+      padding: 20px;
+    }
+    .nav-icon {
+      display: flex;
+    }
 `;
 
 const Header = () => {
@@ -91,7 +110,7 @@ const Header = () => {
           {loggedIn === true && (
             <>
               <Link to="/admin">
-                <GrUserAdmin className="icon-link-home" size={40} />
+                <FcKey className="icon-link-logout" size={40} />
               </Link>
               <LogOutBtn />
             </>

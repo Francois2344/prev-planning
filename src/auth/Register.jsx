@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import AuthContext from '../service/AuthContext';
+import './AuthStyle.css';
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -33,7 +34,9 @@ const Register = () => {
 
   return (
     <div className="register">
-      <h2>Enregistrement dun nouvel Administrateur</h2>
+      <h3 className="register-title">
+        Enregistrement dun nouvel Administrateur
+      </h3>
       <form className="register-form" onSubmit={register}>
         <input
           className="reg-email"
@@ -56,7 +59,9 @@ const Register = () => {
           value={passwordVerify}
           onChange={(e) => setPasswordVerify(e.target.value)}
         />
-        <button type="submit">Register</button>
+        <button className="submit-register" type="submit">
+          Register
+        </button>
       </form>
     </div>
   );
