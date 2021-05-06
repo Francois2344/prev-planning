@@ -38,10 +38,10 @@ const LoginForm = () => {
     <form className="login-form" onSubmit={loginAuth}>
       <div className="form-inner">
         <img className="logo-auth" src={logovinci} alt="" />
-        <h2>Identification</h2>
+        <h2 className="title-auth">Identification</h2>
         <div className="form-group">
-          <label htmlFor="name">E-mail :</label>
           <input
+            placeholder="E-mail"
             type="text"
             email="email"
             id="email"
@@ -50,8 +50,8 @@ const LoginForm = () => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="password">Mot de Passe :</label>
           <input
+            placeholder="Mot de Passe"
             type="password"
             password="password"
             id="password"
@@ -59,7 +59,7 @@ const LoginForm = () => {
             value={password}
           />
         </div>
-        <input type="submit" value="LOGIN" />
+        <input className="login-button" type="submit" value="LOGIN" />
       </div>
     </form>
   );

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useContext } from 'react';
-import { GrLogout } from 'react-icons/gr';
+import { FcImport } from 'react-icons/fc';
 import { useHistory } from 'react-router-dom';
 import AuthContext from '../service/AuthContext';
 
@@ -14,9 +14,9 @@ const LogOutBtn = () => {
     history.push('/');
   };
   return (
-    <GrLogout type="submit" onClick={logOut} size={40}>
+    <FcImport type="submit" onClick={logOut} size={40}>
       Deconnexion
-    </GrLogout>
+    </FcImport>
   );
 };
 

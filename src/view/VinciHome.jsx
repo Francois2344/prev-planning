@@ -14,7 +14,6 @@ const VinciHome = () => {
   }, []);
   return (
     <div className="welcome-page">
-      <h2 className="welcome-title">Informations Préventeurs</h2>
       <ContextCard.Provider value={{ prevName }}>
         {prevName && <Cards />}
       </ContextCard.Provider>

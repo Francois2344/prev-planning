@@ -135,5 +135,4 @@ const DATA = [
     key: '31',
   },
 ];
-
 export default DATA;

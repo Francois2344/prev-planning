@@ -2,13 +2,9 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { FcSettings, FcHome } from 'react-icons/fc';
+import { FcSettings, FcHome, FcKey } from 'react-icons/fc';
 import { BsTable } from 'react-icons/bs';
-import { GrUserAdmin } from 'react-icons/gr';
 import { IoPersonAdd } from 'react-icons/io5';
-// eslint-disable-next-line no-unused-vars
-import Admin from '../admin/Admin';
-
 import logovinci from '../image/VCF blanc.jpg';
 import AuthContext from '../service/AuthContext';
 import LogOutBtn from '../auth/LogOutBtn';
@@ -21,7 +17,8 @@ const HEADER = styled.div`
   color: #5cbed3;
 
   .main-title {
-    margin-top: 15px;
+    margin: auto;
+    font-size: 1em;
   }
 
   .head-display {
@@ -31,20 +28,16 @@ const HEADER = styled.div`
   }
 
   .logo-header {
-    height: 100px;
-    width: 150px;
-    margin: 0;
-    padding: 20px;
+    height: 40px;
+    width: 130px;
+    margin: auto;
   }
-
   .main-line {
     display: flex;
     justify-content: space-between;
     margin: 0;
   }
   .nav-icon {
-    display: flex;
-    justify-content: center;
     padding: 20px;
   }
   .first-line {
@@ -62,6 +55,40 @@ const HEADER = styled.div`
     float: right;
     border-radius: 5px;
   }
+
+  @media screen and (min-width: 768px) {
+    .logo-header {
+      height: 120px;
+      width: 330px;
+      margin: 0em;
+      padding: 20px;
+    }
+    .nav-icon {
+      display: flex;
+      margin: auto;
+    }
+    .icon-link-home {
+      margin-right: 30px;
+    }
+    .icon-link-table {
+      margin-right: 30px;
+    }
+    .icon-link-login {
+      margin-right: 30px;
+    }
+    .icon-link-register {
+      margin-right: 30px;
+    }
+    .icon-link-logout {
+      margin-right: 30px;
+      color: 'skyblue';
+    }
+    .main-title {
+      margin-top: 30px;
+      font-weight: bold;
+      font-size: 3em;
+    }
+  }
 `;
 
 const Header = () => {
@@ -73,25 +100,25 @@ const Header = () => {
         <h1 className="main-title">Pilotage Prévention</h1>
         <div className="nav-icon">
           <Link to="/">
-            <FcHome className="icon-link-home" size={40} />
+            <FcHome className="icon-link-home" size={30} />
           </Link>
           <Link to="table">
-            <BsTable className="icon-link-table" size={40} />
+            <BsTable className="icon-link-table" size={30} />
           </Link>
           {loggedIn === false && (
             <>
               <Link to="/login">
-                <FcSettings className="icon-link-login" size={40} />
+                <FcSettings className="icon-link-login" size={30} />
               </Link>
               <Link to="/register">
-                <IoPersonAdd className="icon-link-register" size={40} />
+                <IoPersonAdd className="icon-link-register" size={30} />
               </Link>
             </>
           )}
           {loggedIn === true && (
             <>
               <Link to="/admin">
-                <GrUserAdmin className="icon-link-home" size={40} />
+                <FcKey className="icon-link-logout" size={40} />
               </Link>
               <LogOutBtn />
             </>

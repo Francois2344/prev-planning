@@ -1,128 +1,48 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useContext } from 'react';
-import styled from 'styled-components';
 import avatar1 from '../image/avatar-1.png';
 import ContextCard from '../service/CardContext';
-
-const CARD = styled.div`
-  width: 15%;
-  margin: 15px;
-  border-radius: 3px;
-  box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.3);
-  border: solid 1px rgba(0, 0, 0, 0.08);
-
-  .picture {
-    display flex;
-    justify-content: center;
-  }
-
-  .profile {
-    width: 60px;
-    height: 60px;
-    margin-top: 25px;
-    border-radius: 50%;
-    box-shadow: 0 0 12px 3px rgba(0, 0, 0, 0.2);
-  }
-
-  .person {
-    padding: 10px;
-    background-color: #a8a8a8;
-    margin: auto;
-    font-size: 13px;
-  }
-
-  h4 {
-    display: flex;
-    margin: 15px;
-    font-size: 10px;
-  }
-
-  h5 {
-    margin: 0px;
-  }
-  .objectif-title {
-    background-color: #49d5e7;
-    color: #ffffff;
-    font-size: 10px;
-  }
-
-  .realise-title {
-    background-color: #494fe7;
-    color: #ffffff;
-    font-size: 10px;
-  }
-
-  .objectif-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border-top: 2px solid #49d5e7;
-    text-color: ;
-    font-size: 10px;
-  }
-  .realise-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    border-top: 2px solid #494fe7;
-    text-color: ;
-    font-size: 10px;
-  }
-
-  p {
-    padding-left: 20px;
-  }
-
-  .color1 {
-    margin: 5px;
-    color: #fc2ccb;
-  }
-  .color2 {
-    margin: 5px;
-    color: #04f117;
-  }
-  .color3 {
-    margin: 5px;
-    color: #029c0f;
-  }
-`;
+import './StyleCards.css';
 
 const Cards = () => {
   const { prevName } = useContext(ContextCard);
   const { firstname, lastname } = prevName;
 
   return (
-    <div className="block-card-prev" style={{ display: 'flex' }}>
-      {prevName.map((key) => (
-        <CARD>
-          <div
-            key={key._id}
-            value={(firstname, lastname)}
-            className="card-container"
-          >
-            <h3 className="person">
-              {key.firstname}
-              {key.lastname}
-            </h3>
-            <div className="picture">
-              <img className="profile" src={avatar1} alt="" />
-            </div>
-            <h4 className="title">Demi journée travaillées:</h4>
-            <div className="objectif-section">
-              <h5 className="objectif-title">Objectif:</h5>
-              <p className="color1">Aléas:</p>
-              <p className="color2">Actions Terrain:</p>
-              <p className="color3">Actions Agence:</p>
-            </div>
-            <div className="realise-section">
-              <h5 className="realise-title">Réalisé:</h5>
-              <p className="color1">Aléas:</p>
-              <p className="color2">Actions Terrain:</p>
-              <p className="color3">Actions Agence:</p>
+    <div className="card-container">
+      <h2 className="welcome-title">Informations Préventeurs</h2>
+      <div className="card-prev">
+        {prevName.map((key) => (
+          <div className="card-style">
+            <div
+              key={key._id}
+              value={(firstname, lastname)}
+              className="card-container"
+            >
+              <h3 className="person">
+                <span>{key.firstname}</span>
+                <span>{key.lastname}</span>
+              </h3>
+              <div className="picture">
+                <img className="profile" src={avatar1} alt="" />
+              </div>
+              <h4 className="title">Demi journée travaillées:</h4>
+              <div className="objectif-section">
+                <h5 className="objectif-title">Objectif:</h5>
+                <p className="color1">Aléas:</p>
+                <p className="color2">Actions Terrain:</p>
+                <p className="color3">Actions Agence:</p>
+              </div>
+              <div className="realise-section">
+                <h5 className="realise-title">Réalisé:</h5>
+                <p className="color1">Aléas:</p>
+                <p className="color2">Actions Terrain:</p>
+                <p className="color3">Actions Agence:</p>
+              </div>
             </div>
           </div>
-        </CARD>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
