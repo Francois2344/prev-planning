@@ -14,20 +14,21 @@ width: 100%;
 }
 .title-admin {
   color: #1a3478;
-  font-size: large;
   margin: auto;
   width: 100%;
+  text-align: center;
 }
 
 @media screen and (min-width: 1224px) {
   .logo-vcf {
     padding: 15px;
-    height: 50px;
-    width: 10em;
+    height: 70px;
+    width: 12em;
   }
 
   .title-admin {
-    font-size: 40px;
+    font-size: 50px;
+    text-align: center;
   }
 }
 
@@ -137,16 +138,16 @@ li {
   flex-direction: row;
 }
 .hazard-title {
-  margin-left: 150px;
+  margin-left: 130px;
 }
 .agency-title {
-  margin-left: 120px;
+  margin-left: 80px;
 }
 .site-title {
-  margin-left: 120px;
+  margin-left: 80px;
 }
 .other-title {
-  margin-left: 150px;
+  margin-left: 130px;
 }
 
 .add-input {
@@ -158,10 +159,19 @@ li {
   border-radius: 5px;
   font-weight: bold;
 }
+.input-select {
+  box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+    -webkit-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+    -moz-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+    border-radius: 20px;
+    margin: 15px;
+    height: 16em;
+
+}
 .form-admin-input {
   display: flex;
   flex-direction: column;
-  margin-left: 90px;
+  margin-left: 70px;
 }
 
 select {
@@ -201,19 +211,39 @@ option {
     padding: 40px;
     margin: 20px;
     margin-top:2rem;
-    box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
-    -webkit-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
-    -moz-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
     border-radius: 20px;
   }
   .block-new-prev {
     display: flex;
     justify-content: space-around;
-    margin: 20px;
     height: 35rem;
     border-radius: 20px;
     box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
     -webkit-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
     -moz-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+    margin: 100px;
+    width: 90%;
   }
+
+  .input-select {
+    box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+      -webkit-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+      -moz-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+      border-radius: 20px;
+      height: 20em;
+      width: 100%;
+  
+  }
+  .form-newprev {
+    margin-top: 50px;
+  }
+
+  .title-new-prev {
+    margin:auto;
+    color: #1a3478;
+    font-weight: 600;
+    width: 100%;
+    font-size: 2em;
+  }
+
 }

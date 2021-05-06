@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useContext, useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import AuthContext from '../service/AuthContext';
+import logovinci from '../image/VCF blanc.jpg';
 import './AuthStyle.css';
 
 const Register = () => {
@@ -34,8 +35,9 @@ const Register = () => {
 
   return (
     <div className="register">
+      <img className="logo-register" src={logovinci} alt="" />
       <h3 className="register-title">
-        Enregistrement dun nouvel Administrateur
+        Enregistrement d&apos;un nouvel Administrateur
       </h3>
       <form className="register-form" onSubmit={register}>
         <input

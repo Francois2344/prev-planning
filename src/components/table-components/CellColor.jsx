@@ -1,3 +1,4 @@
+/* eslint-disable no-plusplus */
 /* eslint-disable indent */
 /* eslint-disable no-nested-ternary */
 import React, { useState, useEffect } from 'react';
@@ -16,12 +17,12 @@ const CellColor = () => {
   const orange = '#FFA419';
   const white = '#FFFFFF';
 
-  const [cellColorData, setCellColorData] = useState({
+  const [cellColorData, setCellColorData] = useState([
     darkgreen,
     lightgreen,
     orange,
     pink,
-  });
+  ]);
 
   const handleColor = () => {
     setCellColorData(
@@ -38,12 +39,14 @@ const CellColor = () => {
   };
 
   useEffect(() => {
-    const Data = localStorage.getItem('cellColorData');
-    setCellColorData(JSON.parse(Data));
+    const data = JSON.parse(localStorage.getItem('key'));
+    if (data) {
+      setCellColorData(data);
+    }
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('cellColorData', JSON.stringify(cellColorData));
+    localStorage.setItem('key', JSON.stringify(cellColorData));
   });
 
   return (
