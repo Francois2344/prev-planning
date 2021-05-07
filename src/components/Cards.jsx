@@ -1,12 +1,52 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable no-underscore-dangle */
-import React, { useContext } from 'react';
-import avatar1 from '../image/avatar-1.png';
+import React, { useContext, useEffect, useState } from 'react';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import { FcUpload } from 'react-icons/fc';
+import { singleFileUpload, getSingleFiles } from '../data/uploadImg';
 import ContextCard from '../service/CardContext';
 import './StyleCards.css';
+import 'react-circular-progressbar/dist/styles.css';
 
 const Cards = () => {
   const { prevName } = useContext(ContextCard);
   const { firstname, lastname } = prevName;
+
+  const [singleFile, setSingleFile] = useState('');
+  const [viewFile, setViewFile] = useState([]);
+  const [singleProgress, setSingleProgress] = useState(0);
+
+  const singleFileChange = (e) => {
+    setSingleFile(e.target.files[0]);
+    setSingleProgress(0);
+  };
+
+  const singleFileOptions = {
+    onUploadProgress: (progressEvent) => {
+      const { loaded, total } = progressEvent;
+      const percentage = Math.floor(((loaded / 1000) * 100) / (total / 1000));
+      setSingleProgress(percentage);
+    },
+  };
+  const uploadSingleFile = async () => {
+    const formData = new FormData();
+    formData.append('photo', singleFile);
+    await singleFileUpload(formData, singleFileOptions);
+    window.location.reload();
+  };
+
+  const viewSingleFiles = async () => {
+    try {
+      const viewfile = await getSingleFiles();
+      setViewFile(viewfile);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    viewSingleFiles();
+  }, []);
 
   return (
     <div className="card-container">
@@ -23,8 +63,46 @@ const Cards = () => {
                 <span>{key.firstname}</span>
                 <span>{key.lastname}</span>
               </h3>
-              <div className="picture">
-                <img className="profile" src={avatar1} alt="" />
+              <div className="progress-image-block">
+                {viewFile.map((file, index) => (
+                  <img
+                    key={index._id}
+                    className="profile-img"
+                    src={`http://localhost:8000/${file.filePath}`}
+                    alt="img"
+                  />
+                ))}
+                <div className="progress_bar">
+                  <CircularProgressbar
+                    className="progress-bar-img"
+                    value={singleProgress}
+                    text={`${singleProgress}%`}
+                    styles={buildStyles({
+                      rotation: 0.25,
+                      strokeLinecap: 'butt',
+                      textSize: '16px',
+                      pathTransitionDuration: 0.5,
+                      pathColor: `rgba(255, 136, 136, ${singleProgress / 100})`,
+                      textColor: '#f88',
+                      trailColor: '#d6d6d6',
+                      backgroundColor: '#3e98c7',
+                    })}
+                  />
+                </div>
+              </div>
+              <div className="upload-img-profil">
+                <input
+                  key="photo"
+                  type="file"
+                  className="input-prev-img"
+                  onChange={(e) => singleFileChange(e)}
+                />
+                <FcUpload
+                  size={20}
+                  type="button"
+                  className="button-upload-img"
+                  onClick={() => uploadSingleFile()}
+                />
               </div>
               <h4 className="title">Demi journée travaillées:</h4>
               <div className="objectif-section">
