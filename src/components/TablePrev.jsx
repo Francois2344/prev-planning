@@ -37,9 +37,10 @@ const TablePrev = () => {
                 value={(firstname, lastname)}
                 className="column0"
                 rowSpan="2"
+                id="header-prev"
               >
                 <span>{i.firstname}</span>
-                <span>{i.lastname}</span>
+                <span>{i.lastname.toUpperCase()}</span>
               </th>
               {DataCell.map((id) => (
                 <td key={id.key} value={(id.col, id.col1)} className="column1">

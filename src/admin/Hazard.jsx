@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import schedule from '../image/schedule.png';
 
 const Hazard = () => {
   const [hazardName, setHazardName] = useState('');
@@ -56,6 +57,9 @@ const Hazard = () => {
   return (
     <div className="input-select">
       <h3 className="hazard-title">Aléas</h3>
+      <div className="icon-office-action">
+        <img className="icon-office" src={schedule} alt="icon-action-agence" />
+      </div>
       <form className="form-admin">
         <div className="form-admin-input">
           <select

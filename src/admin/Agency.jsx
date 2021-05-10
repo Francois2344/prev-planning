@@ -1,6 +1,9 @@
+/* eslint-disable jsx-a11y/anchor-has-content */
+/* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable no-underscore-dangle */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import building from '../image/building.png';
 
 const Agency = () => {
   const [agencyName, setAgencyName] = useState('');
@@ -56,6 +59,9 @@ const Agency = () => {
   return (
     <div className="input-select">
       <h3 className="agency-title">Actions Agence</h3>
+      <div className="icon-office-action">
+        <img className="icon-office" src={building} alt="icon-action-agence" />
+      </div>
       <form className="form-admin">
         <div className="form-admin-input">
           <select

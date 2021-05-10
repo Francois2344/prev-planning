@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import beachchair from '../image/beach-chair.png';
 
 const Other = () => {
   const [otherName, setOtherName] = useState('');
@@ -56,6 +57,13 @@ const Other = () => {
   return (
     <div className="input-select">
       <h3 className="other-title">Autres</h3>
+      <div className="icon-office-action">
+        <img
+          className="icon-office"
+          src={beachchair}
+          alt="icon-action-agence"
+        />
+      </div>
       <form className="form-admin">
         <div className="form-admin-input">
           <select

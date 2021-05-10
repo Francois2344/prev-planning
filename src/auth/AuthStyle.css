@@ -18,7 +18,7 @@
 
 .login-button {
     margin-left: 20px;
-    background: #00206b;
+    background: #004489;
     color: whitesmoke;
     border: none;
     appearance: none;
@@ -50,7 +50,7 @@
 
 h2 {
     align-self: center;
-    color:#00206b;
+    color:#004489;
     font-weight: bold;
 }
 .register-title {
