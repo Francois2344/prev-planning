@@ -29,7 +29,7 @@ const DATA = [
     key: '5',
   },
   {
-    col: 'Off',
+    col: '',
     key: 'OFF1',
   },
   {

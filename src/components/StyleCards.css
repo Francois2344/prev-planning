@@ -6,6 +6,7 @@
 }
 span {
   margin-right: 5px;
+  font-weight: bold;
 }
 
 .picture {
@@ -27,6 +28,7 @@ span {
   margin: auto;
   font-size: 13px;
   border-radius: 10px;
+  text-align: center;
 }
 
 .title {
@@ -39,13 +41,15 @@ h5 {
   margin: 0px;
 }
 .objectif-title {
-  background-color: #49d5e7;
+  background-color: #189FD6;
+  width: 100%;
   color: #ffffff;
   font-size: 10px;
 }
 
 .realise-title {
-  background-color: #494fe7;
+  background-color: #004489;
+  width: 100%;
   color: #ffffff;
   font-size: 10px;
 }
@@ -54,19 +58,26 @@ h5 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-top: 2px solid #49d5e7;
+  border-top: 2px solid #189FD6;
   font-size: 10px;
 }
 .realise-section {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-top: 2px solid #494fe7;
+  border-top: 2px solid #004489;
   font-size: 10px;
 }
 
 p {
   padding-left: 20px;
+}
+
+.welcome-title {
+  text-align: center;
+  font-weight: bold;
+  background-color: #c4c4c4;
+  width: 100%;
 }
 
 .color1 {
@@ -98,7 +109,7 @@ p {
 }
 .input-prev-img {
   font-size: xx-small;
-  }
+}
 
 @media (min-width: 768px) {
   .card-prev {
@@ -107,6 +118,7 @@ p {
   }
   .welcome-title {
     text-align: center;
+    font-weight: bold;
   }
   .card-style {
     width: 220px;
@@ -127,6 +139,6 @@ p {
     margin: 10px;
   }
   .input-prev-img {
-  font-size: xx-small;
+    font-size: xx-small;
   }
 }

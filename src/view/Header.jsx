@@ -14,11 +14,12 @@ const HEADER = styled.div`
   font-style: normal;
   font-weight: normal;
   text-align: start;
-  color: #5cbed3;
+  color: #189fd6;
 
   .main-title {
     margin: auto;
     font-size: 1em;
+    margin-left: 10px;
   }
 
   .head-display {
@@ -43,17 +44,19 @@ const HEADER = styled.div`
   .first-line {
     width: 70%;
     height: 15px;
-    background-color: #1a3478;
+    background-color: #004489;
     margin-bottom: 20px;
     float: left;
     border-radius: 5px;
+    margin-left: 10px;
   }
   .second-line {
-    width: 29%;
+    width: 28%;
     height: 15px;
-    background-color: #5cbed3;
+    background-color: #189fd6;
     float: right;
     border-radius: 5px;
+    margin-right: 10px;
   }
 
   @media screen and (min-width: 768px) {
@@ -81,7 +84,7 @@ const HEADER = styled.div`
     }
     .icon-link-logout {
       margin-right: 30px;
-      color: 'skyblue';
+      color: #189fd6;
     }
     .main-title {
       margin-top: 30px;

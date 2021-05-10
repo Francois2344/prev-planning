@@ -13,7 +13,7 @@ width: 100%;
   padding: 15px;
 }
 .title-admin {
-  color: #1a3478;
+  color: #004489;
   margin: auto;
   width: 100%;
   text-align: center;
@@ -46,7 +46,7 @@ width: 100%;
 
 .title-new-prev {
   margin:auto;
-  color: #1a3478;
+  color: #004489;
   font-weight: 600;
   font-size: large;
   width: 100%;
@@ -59,7 +59,7 @@ input {
   height: 40px;
   width: 20em;
   margin-top: 25px;
-  color: #1a3478;
+  color: #004489;
   font-weight: bold;
   border-radius: 8px;
 }
@@ -75,8 +75,8 @@ button {
   border-radius: 8px;
   background-image: linear-gradient(
     to right,
-    #00206b 50%,
-    #00206b 50%,
+    #004489 50%,
+    #004489 50%,
     #d40000
   );
   background-size: 200%;
@@ -101,11 +101,9 @@ button {
 }
 
 h3 {
-  display: flex;
-  justify-content: flex-start;
   margin-top: 70px;
   margin-bottom: 20px;
-  color: #00206b;
+  color: #004489;
 }
 
 .list-items {
@@ -116,7 +114,7 @@ h3 {
 li {
   list-style: square;
   padding-bottom: 20px;
-  color: #00206b;
+  color: #004489;
   margin-left: 5px;
   padding-top: 10px;
   font-weight: 600;
@@ -139,19 +137,35 @@ li {
 }
 .hazard-title {
   margin-left: 130px;
+  color: magenta;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .agency-title {
-  margin-left: 80px;
+  margin-left: 50px;
+  color:darkgreen;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .site-title {
-  margin-left: 80px;
+  margin-left: 50px;
+  color:#65F55F;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .other-title {
   margin-left: 130px;
+  color: orange;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .add-input {
-  width: 160px;
+  width: 200px;
   height: 30px;
   margin: auto;
   margin-top: 10px;
@@ -165,7 +179,7 @@ li {
     -moz-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
     border-radius: 20px;
     margin: 15px;
-    height: 16em;
+    height: 19em;
 
 }
 .form-admin-input {
@@ -179,18 +193,16 @@ select {
   width: 200px;
   margin: auto;
   height: 40px;
-  color: #00206b;
   font-weight: bold;
   cursor: pointer;
 }
 
 label {
-  color: #00206b;
+  color: #004489;
   font-weight: bold;
 }
 
 option {
-  color: #00206b;
   font-weight: bold;
 }
 
@@ -200,6 +212,14 @@ option {
 }
 .delete-input {
   margin: auto;
+}
+.icon-office-action {
+  display: flex;
+  justify-content: center;
+}
+.icon-office {
+  width: 30px;
+  margin: 10px;
 }
 
 /* Media Query pour Desktop*/
@@ -240,7 +260,7 @@ option {
 
   .title-new-prev {
     margin:auto;
-    color: #1a3478;
+    color: #004489;
     font-weight: 600;
     width: 100%;
     font-size: 2em;

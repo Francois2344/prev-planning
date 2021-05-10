@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import construction from '../image/construction.png';
 
 const Site = () => {
   const [siteName, setSiteName] = useState('');
@@ -54,6 +55,13 @@ const Site = () => {
   return (
     <div className="input-select">
       <h3 className="site-title">Actions Terrain</h3>
+      <div className="icon-office-action">
+        <img
+          className="icon-office"
+          src={construction}
+          alt="icon-action-agence"
+        />
+      </div>
       <form className="form-admin">
         <div className="form-admin-input">
           <select

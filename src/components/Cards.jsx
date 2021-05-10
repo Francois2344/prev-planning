@@ -61,7 +61,7 @@ const Cards = () => {
             >
               <h3 className="person">
                 <span>{key.firstname}</span>
-                <span>{key.lastname}</span>
+                <span>{key.lastname.toUpperCase()}</span>
               </h3>
               <div className="progress-image-block">
                 {viewFile.map((file, index) => (
@@ -104,18 +104,18 @@ const Cards = () => {
                   onClick={() => uploadSingleFile()}
                 />
               </div>
-              <h4 className="title">Demi journée travaillées:</h4>
+              <h4 className="title">Demi journée travaillées :</h4>
               <div className="objectif-section">
-                <h5 className="objectif-title">Objectif:</h5>
-                <p className="color1">Aléas:</p>
-                <p className="color2">Actions Terrain:</p>
-                <p className="color3">Actions Agence:</p>
+                <h5 className="objectif-title">Objectif :</h5>
+                <p className="color1">Aléas :</p>
+                <p className="color2">Actions Terrain :</p>
+                <p className="color3">Actions Agence :</p>
               </div>
               <div className="realise-section">
-                <h5 className="realise-title">Réalisé:</h5>
-                <p className="color1">Aléas:</p>
-                <p className="color2">Actions Terrain:</p>
-                <p className="color3">Actions Agence:</p>
+                <h5 className="realise-title">Réalisé :</h5>
+                <p className="color1">Aléas :</p>
+                <p className="color2">Actions Terrain :</p>
+                <p className="color3">Actions Agence :</p>
               </div>
             </div>
           </div>
