@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { ImBin, ImBoxAdd } from 'react-icons/im';
 import beachchair from '../image/beach-chair.png';
 
 const Other = () => {
@@ -83,12 +84,26 @@ const Other = () => {
             value={othName}
             onChange={handleChangeOthName}
           />
-          <button className="post-input" type="submit" onClick={handleAddOther}>
-            Ajouter
-          </button>
-          <button className="delete-input" type="button" onClick={deleteOther}>
-            Supprimer
-          </button>
+          <div className="icon-post-delete">
+            <ImBoxAdd
+              size={30}
+              color="#14DB03"
+              className="post-input"
+              type="submit"
+              onClick={handleAddOther}
+            >
+              Ajouter
+            </ImBoxAdd>
+            <ImBin
+              size={30}
+              color="#D00303"
+              className="delete-input"
+              type="button"
+              onClick={deleteOther}
+            >
+              Supprimer
+            </ImBin>
+          </div>
         </div>
       </form>
     </div>

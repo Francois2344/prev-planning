@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { ImBin, ImBoxAdd } from 'react-icons/im';
 import construction from '../image/construction.png';
 
 const Site = () => {
@@ -81,12 +82,26 @@ const Site = () => {
             value={fieldName}
             onChange={handleChangeFieldName}
           />
-          <button className="post-input" type="submit" onClick={handleAddSite}>
-            Ajouter
-          </button>
-          <button className="delete-input" type="button" onClick={deleteSite}>
-            Supprimer
-          </button>
+          <div className="icon-post-delete">
+            <ImBoxAdd
+              size={30}
+              color="#14DB03"
+              className="post-input"
+              type="submit"
+              onClick={handleAddSite}
+            >
+              Ajouter
+            </ImBoxAdd>
+            <ImBin
+              size={30}
+              color="#D00303"
+              className="delete-input"
+              type="button"
+              onClick={deleteSite}
+            >
+              Supprimer
+            </ImBin>
+          </div>
         </div>
       </form>
     </div>

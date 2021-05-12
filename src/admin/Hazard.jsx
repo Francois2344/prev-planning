@@ -1,6 +1,7 @@
 /* eslint-disable no-underscore-dangle */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { ImBin, ImBoxAdd } from 'react-icons/im';
 import schedule from '../image/schedule.png';
 
 const Hazard = () => {
@@ -79,16 +80,26 @@ const Hazard = () => {
             value={aleasName}
             onChange={handleChangeAlesName}
           />
-          <button
-            className="post-input"
-            type="submit"
-            onClick={handleAddHazard}
-          >
-            Ajouter
-          </button>
-          <button className="delete-input" type="button" onClick={deleteHazard}>
-            Supprimer
-          </button>
+          <div className="icon-post-delete">
+            <ImBoxAdd
+              size={30}
+              color="#14DB03"
+              className="post-input"
+              type="submit"
+              onClick={handleAddHazard}
+            >
+              Ajouter
+            </ImBoxAdd>
+            <ImBin
+              size={30}
+              color="#D00303"
+              className="delete-input"
+              type="button"
+              onClick={deleteHazard}
+            >
+              Supprimer
+            </ImBin>
+          </div>
         </div>
       </form>
     </div>

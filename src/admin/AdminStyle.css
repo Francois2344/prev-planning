@@ -1,11 +1,11 @@
 /*Style En tête Administration*/
 
 .head-admin {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-background-color: #c4c4c4;
-width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #c4c4c4;
+  width: 100%;
 }
 
 .logo-vcf {
@@ -45,7 +45,7 @@ width: 100%;
 }
 
 .title-new-prev {
-  margin:auto;
+  margin: auto;
   color: #004489;
   font-weight: 600;
   font-size: large;
@@ -144,14 +144,14 @@ li {
 }
 .agency-title {
   margin-left: 50px;
-  color:darkgreen;
+  color: darkgreen;
   font-weight: 800;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 .site-title {
   margin-left: 50px;
-  color:#65F55F;
+  color: #65f55f;
   font-weight: 800;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -175,12 +175,11 @@ li {
 }
 .input-select {
   box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
-    -webkit-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
-    -moz-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
-    border-radius: 20px;
-    margin: 15px;
-    height: 19em;
-
+  -webkit-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+  -moz-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+  border-radius: 20px;
+  margin: 15px;
+  height: 19em;
 }
 .form-admin-input {
   display: flex;
@@ -221,6 +220,10 @@ option {
   width: 30px;
   margin: 10px;
 }
+.icon-post-delete {
+  display: flex;
+  margin-top: 20px;
+}
 
 /* Media Query pour Desktop*/
 
@@ -230,7 +233,7 @@ option {
     justify-content: space-around;
     padding: 40px;
     margin: 20px;
-    margin-top:2rem;
+    margin-top: 2rem;
     border-radius: 20px;
   }
   .block-new-prev {
@@ -247,23 +250,21 @@ option {
 
   .input-select {
     box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
-      -webkit-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
-      -moz-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
-      border-radius: 20px;
-      height: 20em;
-      width: 100%;
-  
+    -webkit-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+    -moz-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+    border-radius: 20px;
+    height: 20em;
+    width: 100%;
   }
   .form-newprev {
     margin-top: 50px;
   }
 
   .title-new-prev {
-    margin:auto;
+    margin: auto;
     color: #004489;
     font-weight: 600;
     width: 100%;
     font-size: 2em;
   }
-
 }
