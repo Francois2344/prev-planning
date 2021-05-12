@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useEffect, useState } from 'react';
+import { ImBin } from 'react-icons/im';
 import axios from 'axios';
 import Head from './Head';
 import Hazard from './Hazard';
@@ -96,13 +97,15 @@ const Admin = () => {
                   <li className="item-2">{val.lastname}</li>
                 </div>
                 <div className="remove-button">
-                  <button
+                  <ImBin
+                    size={20}
+                    color="#D00303"
                     type="button"
                     className="delete-prev"
                     onClick={() => deletePreventer(val._id)}
                   >
                     Supprimer
-                  </button>
+                  </ImBin>
                 </div>
               </div>
             );

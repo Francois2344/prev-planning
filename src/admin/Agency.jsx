@@ -3,6 +3,7 @@
 /* eslint-disable no-underscore-dangle */
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { ImBin, ImBoxAdd } from 'react-icons/im';
 import building from '../image/building.png';
 
 const Agency = () => {
@@ -81,16 +82,26 @@ const Agency = () => {
             value={agName}
             onChange={handleChangeAgName}
           />
-          <button
-            className="post-input"
-            type="submit"
-            onClick={handleAddAgency}
-          >
-            Ajouter
-          </button>
-          <button className="delete-input" type="button" onClick={deleteAgency}>
-            Supprimer
-          </button>
+          <div className="icon-post-delete">
+            <ImBoxAdd
+              size={30}
+              color="#14DB03"
+              className="post-input"
+              type="submit"
+              onClick={handleAddAgency}
+            >
+              Ajouter
+            </ImBoxAdd>
+            <ImBin
+              size={30}
+              color="#D00303"
+              className="delete-input"
+              type="button"
+              onClick={deleteAgency}
+            >
+              Supprimer
+            </ImBin>
+          </div>
         </div>
       </form>
     </div>

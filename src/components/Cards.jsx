@@ -51,6 +51,44 @@ const Cards = () => {
   return (
     <div className="card-container">
       <h2 className="welcome-title">Informations Préventeurs</h2>
+      <div className="progress-image-block">
+        {viewFile.map((file) => (
+          <img
+            className="profile-img"
+            src={`http://localhost:8000/${file.filePath}`}
+            alt="img"
+          />
+        ))}
+        <div className="progress_bar">
+          <CircularProgressbar
+            className="progress-bar-img"
+            value={singleProgress}
+            text={`${singleProgress}%`}
+            styles={buildStyles({
+              rotation: 0.25,
+              strokeLinecap: 'butt',
+              textSize: '16px',
+              pathTransitionDuration: 0.5,
+              pathColor: `rgba(255, 136, 136, ${singleProgress / 100})`,
+              textColor: '#004489',
+              trailColor: '#d6d6d6',
+              backgroundColor: '#004489',
+            })}
+          />
+          <input
+            key="photo"
+            type="file"
+            className="input-prev-img"
+            onChange={(e) => singleFileChange(e)}
+          />
+          <FcUpload
+            size={30}
+            type="button"
+            className="button-upload-img"
+            onClick={() => uploadSingleFile()}
+          />
+        </div>
+      </div>
       <div className="card-prev">
         {prevName.map((key) => (
           <div className="card-style">
@@ -63,47 +101,6 @@ const Cards = () => {
                 <span>{key.firstname}</span>
                 <span>{key.lastname.toUpperCase()}</span>
               </h3>
-              <div className="progress-image-block">
-                {viewFile.map((file, index) => (
-                  <img
-                    key={index._id}
-                    className="profile-img"
-                    src={`http://localhost:8000/${file.filePath}`}
-                    alt="img"
-                  />
-                ))}
-                <div className="progress_bar">
-                  <CircularProgressbar
-                    className="progress-bar-img"
-                    value={singleProgress}
-                    text={`${singleProgress}%`}
-                    styles={buildStyles({
-                      rotation: 0.25,
-                      strokeLinecap: 'butt',
-                      textSize: '16px',
-                      pathTransitionDuration: 0.5,
-                      pathColor: `rgba(255, 136, 136, ${singleProgress / 100})`,
-                      textColor: '#f88',
-                      trailColor: '#d6d6d6',
-                      backgroundColor: '#3e98c7',
-                    })}
-                  />
-                </div>
-              </div>
-              <div className="upload-img-profil">
-                <input
-                  key="photo"
-                  type="file"
-                  className="input-prev-img"
-                  onChange={(e) => singleFileChange(e)}
-                />
-                <FcUpload
-                  size={20}
-                  type="button"
-                  className="button-upload-img"
-                  onClick={() => uploadSingleFile()}
-                />
-              </div>
               <h4 className="title">Demi journée travaillées :</h4>
               <div className="objectif-section">
                 <h5 className="objectif-title">Objectif :</h5>
