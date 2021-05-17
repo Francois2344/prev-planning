@@ -33,7 +33,7 @@ span {
 
 .title {
   display: flex;
-  margin: 15px;
+  margin: 20px;
   font-size: 10px;
 }
 
@@ -83,14 +83,17 @@ p {
 .color1 {
   margin: 5px;
   color: #fc2ccb;
+  height: 20px;
 }
 .color2 {
   margin: 5px;
   color: #04f117;
+  height: 20px;
 }
 .color3 {
   margin: 5px;
   color: #029c0f;
+  height: 20px;
 }
 .progress_bar {
   height: 50px;
@@ -112,8 +115,8 @@ p {
 
 @media (min-width: 768px) {
   .card-prev {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
   }
   .welcome-title {
     text-align: center;
