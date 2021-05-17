@@ -136,7 +136,7 @@ li {
   flex-direction: row;
 }
 .hazard-title {
-  margin-left: 130px;
+  margin-left: 110px;
   color: magenta;
   font-weight: 800;
   margin-top: 10px;
@@ -157,7 +157,7 @@ li {
   margin-bottom: 10px;
 }
 .other-title {
-  margin-left: 130px;
+  margin-left: 110px;
   color: orange;
   font-weight: 800;
   margin-top: 10px;

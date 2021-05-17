@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Container from './Layout/Container';
+import Container from './layout/Container';
 import LoginForm from './auth/LoginForm';
 import VinciHome from './view/VinciHome';
 import MainTable from './view/MainTable';

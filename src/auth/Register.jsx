@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React, { useContext, useState } from 'react';
+import { toast } from 'react-toastify';
 import { useHistory } from 'react-router-dom';
 import AuthContext from '../service/AuthContext';
 import logovinci from '../image/VCF blanc.jpg';
@@ -28,8 +29,9 @@ const Register = () => {
       });
       getLoggedIn();
       history.push('/');
+      window.location.reload();
     } catch (err) {
-      console.error(err);
+      toast.error('Mot de passe incorrect, 6 caractères minimum');
     }
   }
 
@@ -61,8 +63,8 @@ const Register = () => {
           value={passwordVerify}
           onChange={(e) => setPasswordVerify(e.target.value)}
         />
-        <button className="submit-register" type="submit">
-          Register
+        <button onClick={register} className="submit-register" type="submit">
+          Envoyé
         </button>
       </form>
     </div>

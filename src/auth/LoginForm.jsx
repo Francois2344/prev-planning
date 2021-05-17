@@ -1,6 +1,7 @@
 /* eslint-disable react/jsx-curly-newline */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { useState, useContext } from 'react';
+import { toast } from 'react-toastify';
 import axios from 'axios';
 import { useHistory } from 'react-router-dom';
 import logovinci from '../image/VCF couleur.jpg';
@@ -28,12 +29,14 @@ const LoginForm = () => {
         },
       });
       getLoggedIn();
+      toast.success('Bienvenue');
       history.push('/');
       window.location.reload();
     } catch (err) {
       console.error(err);
     }
   }
+
   return (
     <form className="login-form" onSubmit={loginAuth}>
       <div className="form-inner">
