@@ -62,7 +62,7 @@ const Register = () => {
           onChange={(e) => setPasswordVerify(e.target.value)}
         />
         <button className="submit-register" type="submit">
-          Register
+          Envoyé
         </button>
       </form>
     </div>
