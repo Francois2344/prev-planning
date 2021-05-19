@@ -1,7 +1,7 @@
 /* eslint-disable no-plusplus */
 /* eslint-disable indent */
 /* eslint-disable no-nested-ternary */
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 const COLOR = styled.div`
@@ -37,17 +37,6 @@ const CellColor = () => {
         : white
     );
   };
-
-  useEffect(() => {
-    const data = JSON.parse(localStorage.getItem('key'));
-    if (data) {
-      setCellColorData(data);
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('key', JSON.stringify(cellColorData));
-  });
 
   return (
     <COLOR className="cell-color">
