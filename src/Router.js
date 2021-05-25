@@ -8,6 +8,8 @@ import Admin from './admin/Admin';
 import Register from './auth/Register';
 import AuthContext from './service/AuthContext';
 
+// le Router pour la naviguation
+
 const Router = () => {
   const { loggedIn } = useContext(AuthContext);
   return (

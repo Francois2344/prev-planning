@@ -9,6 +9,8 @@ import AuthContext from '../service/AuthContext';
 import LogOutBtn from '../auth/LogOutBtn';
 import './StyleHeader.css';
 
+// Header avec la naviguation, rappel du context pour l'authentification
+
 const Header = () => {
   const { loggedIn } = useContext(AuthContext);
 

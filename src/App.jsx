@@ -1,5 +1,4 @@
-/* eslint-disable no-undef */
-/* eslint-disable import/named */
+/* eslint-disable import/no-duplicates */
 import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { ImBin, ImBoxAdd } from 'react-icons/im';
 import beachchair from '../image/beach-chair.png';
 
+// Composant Autre, permet d'ajouter ou de supprimer une action Autre via l'appel d'API
+
 const Other = () => {
   const [otherName, setOtherName] = useState('');
   const [otherList, setOtherList] = useState([]);

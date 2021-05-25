@@ -9,11 +9,21 @@ const SELECTDATA = styled.select`
   height: 30px;
 `;
 
+// 2eme composants du tableau, un input select afin de selectionner une action en rapport avec la couleur,
+// viens s'incruster dans le fichier DataCell
+
 const CellData = () => {
   const [dataAgency, setDataAgency] = useState([]);
   const [dataHazard, setDataHazard] = useState([]);
   const [dataOther, setDataOther] = useState([]);
   const [dataSite, setDataSite] = useState([]);
+
+  const handleChange = (e) => {
+    setDataAgency(e.target.value);
+    setDataHazard(e.target.value);
+    setDataOther(e.target.value);
+    setDataSite(e.target.value);
+  };
 
   const fetchDataOne = async () => {
     const urlHazard = 'http://localhost:8000/hazards';
@@ -53,8 +63,8 @@ const CellData = () => {
     <div className="cell-data-select">
       <SELECTDATA className="data-select">
         <optgroup label="Action Terrain">
-          <option disabled selected value>
-            -- --
+          <option value="Selection" onChange={handleChange}>
+            Selection
           </option>
           {dataSite.map((i) => (
             <option key={i._id} value={i.siteName}>

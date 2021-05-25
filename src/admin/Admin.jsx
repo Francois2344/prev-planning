@@ -9,6 +9,8 @@ import Site from './Site';
 import Other from './Other';
 import './AdminStyle.css';
 
+// Page administrateur, affiche les composants pour la partie administration
+
 const Admin = () => {
   const [firstname, setFirstName] = useState('');
   const [lastname, setLastName] = useState('');

@@ -3,6 +3,8 @@ import axios from 'axios';
 import Context from '../service/PrevContext';
 import TablePrev from '../components/TablePrev';
 
+// Le Tableau avec le context
+
 const MainTable = () => {
   const [prevName, setPrevName] = useState();
 

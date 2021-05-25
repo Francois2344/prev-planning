@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { ImBin, ImBoxAdd } from 'react-icons/im';
 import construction from '../image/construction.png';
 
+// Composant Action Terrain, permet d'ajouter ou de supprimer une action via l'appel d'API
+
 const Site = () => {
   const [siteName, setSiteName] = useState('');
   const [siteList, setSiteList] = useState([]);
