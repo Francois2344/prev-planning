@@ -2,6 +2,8 @@ import React from 'react';
 import CellColor from './CellColor';
 import CellData from './CellData';
 
+// Data du tableau, .map sur TablePrev
+
 const DATA = [
   {
     col: <CellColor />,
@@ -29,7 +31,7 @@ const DATA = [
     key: '5',
   },
   {
-    col: '',
+    col: 'off',
     key: 'OFF1',
   },
   {

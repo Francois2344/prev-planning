@@ -5,6 +5,8 @@ import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import AuthContext from '../service/AuthContext';
 
+// Icone de deconnexion dans la naviguation lorsque l'on est identifié (Porte Rose)
+
 const LogOutBtn = () => {
   const { getLoggedIn } = useContext(AuthContext);
   const history = useHistory();

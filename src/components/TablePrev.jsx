@@ -7,6 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import COLUMNS from './table-components/Columns';
 import DataCell from './table-components/DataCell';
 
+// Le composant tableau pilotage prévention relié à mainTable dans view pour le context
+
 const TablePrev = () => {
   const { prevName } = useContext(PrevContext);
   const { firstname, lastname } = prevName;

@@ -6,6 +6,8 @@ import AuthContext from '../service/AuthContext';
 import logovinci from '../image/VCF blanc.jpg';
 import './AuthStyle.css';
 
+// Formulaire d'enregistrement d'un nouvel administrateur
+
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

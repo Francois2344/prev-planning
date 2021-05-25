@@ -1,5 +1,6 @@
-/* eslint-disable no-plusplus */
 /* eslint-disable indent */
+/* eslint-disable react/prop-types */
+/* eslint-disable no-plusplus */
 /* eslint-disable no-nested-ternary */
 import React, { useState } from 'react';
 import styled from 'styled-components';
@@ -9,8 +10,9 @@ const COLOR = styled.div`
     width: 150px;
   }
 `;
+// 1er Composant du tableau, cellule qui change de couleur au clic, viens s'incruster au composant DataCell
 
-const CellColor = () => {
+function CellColor() {
   const darkgreen = '#4FA100';
   const lightgreen = '#88FF17';
   const pink = '#FF43D7';
@@ -44,10 +46,10 @@ const CellColor = () => {
         className="cell-click"
         role="presentation"
         style={{ backgroundColor: cellColorData }}
-        onClick={(e) => handleColor(e.target.style.backgroundColor)}
+        onClick={(e) => handleColor(e.target.backgroundColor)}
       />
     </COLOR>
   );
-};
+}
 
 export default CellColor;

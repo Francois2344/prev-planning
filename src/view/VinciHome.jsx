@@ -3,6 +3,8 @@ import axios from 'axios';
 import Cards from '../components/Cards';
 import ContextCard from '../service/CardContext';
 
+// Page d'accueil avec les cards
+
 const VinciHome = () => {
   const [prevName, setPrevName] = useState();
 

@@ -3,6 +3,8 @@
 import axios from 'axios';
 import React, { createContext, useEffect, useState } from 'react';
 
+// Context pour l'authentification avec l'appel d'api
+
 const AuthContext = createContext();
 
 const AuthContextProvider = (props) => {

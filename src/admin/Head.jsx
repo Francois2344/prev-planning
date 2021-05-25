@@ -1,5 +1,7 @@
 import React from 'react';
 
+// En tete Administration
+
 const Head = () => {
   return (
     <div className="head-admin">

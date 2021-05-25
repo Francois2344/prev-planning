@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import { ImBin, ImBoxAdd } from 'react-icons/im';
 import schedule from '../image/schedule.png';
 
+// Composant Aleas, permet d'ajouter ou de supprimer un aleas via l'appel d'API
+
 const Hazard = () => {
   const [hazardName, setHazardName] = useState('');
   const [hazardList, setHazardList] = useState([]);

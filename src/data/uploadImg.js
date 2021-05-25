@@ -2,6 +2,8 @@
 /* eslint-disable no-useless-catch */
 import axios from 'axios';
 
+// appel d'api pour l'upload d'image
+
 const apiPostUrl = 'http://localhost:8000/imagesUpload/singleFile';
 const apiGetUrl = 'http://localhost:8000/imagesUpload';
 

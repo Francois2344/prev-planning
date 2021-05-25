@@ -1,3 +1,5 @@
+// Structure du tableau, .Map sur TablePrev
+
 const COLUMNS = [
   {
     Header: '1',

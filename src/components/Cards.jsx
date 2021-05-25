@@ -8,6 +8,10 @@ import ContextCard from '../service/CardContext';
 import './StyleCards.css';
 import 'react-circular-progressbar/dist/styles.css';
 
+// le composant Cards est relié à un preventeur, et indique les données en fonction du préventeur,
+// ils sont affichés dans la page principale et du composant VinciHome
+// l'upload d'image est également présent dans le composant Card
+
 const Cards = () => {
   const { prevName } = useContext(ContextCard);
   const { firstname, lastname } = prevName;

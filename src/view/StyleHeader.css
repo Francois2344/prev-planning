@@ -1,3 +1,4 @@
+/* Style du Header et des icones de navigation */
 .main-header {
     font-family: Baloo;
     font-style: normal;
@@ -47,7 +48,9 @@
       border-radius: 5px;
       margin-right: 10px;
     }
-  
+
+  /*Version Desktop*/
+
     @media screen and (min-width: 768px) {
       .logo-header {
         height: 120px;

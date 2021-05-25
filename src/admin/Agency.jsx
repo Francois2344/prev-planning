@@ -6,6 +6,8 @@ import React, { useEffect, useState } from 'react';
 import { ImBin, ImBoxAdd } from 'react-icons/im';
 import building from '../image/building.png';
 
+// Composant Action Agence, permet d'ajouter ou de supprimer une action via l'appel d'API
+
 const Agency = () => {
   const [agencyName, setAgencyName] = useState('');
   const [agencyList, setAgencyList] = useState([]);
