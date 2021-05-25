@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FcSettings, FcHome, FcKey } from 'react-icons/fc';
 import { BsTable } from 'react-icons/bs';
 import { IoPersonAdd } from 'react-icons/io5';
+import { SiPowerbi } from 'react-icons/si';
 import logovinci from '../image/VCF blanc.jpg';
 import AuthContext from '../service/AuthContext';
 import LogOutBtn from '../auth/LogOutBtn';
@@ -22,8 +23,11 @@ const Header = () => {
           <Link to="/">
             <FcHome className="icon-link-home" size={30} />
           </Link>
+          <Link to="/powerbi">
+            <SiPowerbi className="icon-link-powerbi" size={30} color="orange" />
+          </Link>
           <Link to="table">
-            <BsTable className="icon-link-table" size={30} />
+            <BsTable className="icon-link-table" size={30} color="004489" />
           </Link>
           {loggedIn === false && (
             <>
@@ -31,7 +35,11 @@ const Header = () => {
                 <FcSettings className="icon-link-login" size={30} />
               </Link>
               <Link to="/register">
-                <IoPersonAdd className="icon-link-register" size={30} />
+                <IoPersonAdd
+                  className="icon-link-register"
+                  size={30}
+                  color="D51313"
+                />
               </Link>
             </>
           )}

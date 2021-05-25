@@ -4,6 +4,7 @@ import Container from './layout/Container';
 import LoginForm from './auth/LoginForm';
 import VinciHome from './view/VinciHome';
 import MainTable from './view/MainTable';
+import PowerBi from './view/PowerBi';
 import Admin from './admin/Admin';
 import Register from './auth/Register';
 import AuthContext from './service/AuthContext';
@@ -18,6 +19,9 @@ const Router = () => {
       <Switch>
         <Route exact path="/">
           <VinciHome />
+        </Route>
+        <Route path="/powerbi">
+          <PowerBi />
         </Route>
         <Route path="/table">
           <MainTable />
