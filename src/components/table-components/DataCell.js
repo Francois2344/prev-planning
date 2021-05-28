@@ -3,7 +3,6 @@ import CellColor from './CellColor';
 import CellData from './CellData';
 
 // Data du tableau, .map sur TablePrev
-
 const DATA = [
   {
     col: <CellColor />,
@@ -31,7 +30,7 @@ const DATA = [
     key: '5',
   },
   {
-    col: 'off',
+    col: 'WE',
     key: 'OFF1',
   },
   {
@@ -60,7 +59,7 @@ const DATA = [
     key: '12',
   },
   {
-    col: 'Off',
+    col: 'WE',
     key: 'OFF2',
   },
   {
@@ -89,7 +88,7 @@ const DATA = [
     key: '19',
   },
   {
-    col: 'Off',
+    col: 'WE',
     key: 'OFF3',
   },
   {
@@ -118,7 +117,7 @@ const DATA = [
     key: '26',
   },
   {
-    col: 'Off',
+    col: 'WE',
     key: 'OFF4',
   },
   {
