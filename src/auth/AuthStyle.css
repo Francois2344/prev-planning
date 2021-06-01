@@ -1,0 +1,104 @@
+.form-inner {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.logo-auth {
+    align-self: center;
+    margin: 20px;
+    width: 250px;
+    height:4rem;
+}
+.form-group {
+    margin-left: 20px;
+}
+.title-auth {
+    font-weight: bold;
+}
+
+.login-button {
+    margin-left: 20px;
+    background: #004489;
+    color: whitesmoke;
+    border: none;
+    appearance: none;
+}
+/* Media Query Desktop */
+
+@media screen  and (min-width: 768px) {
+    .login-form {
+    margin-top: 50px;
+    }
+    .form-inner {
+        display: flex;
+        flex-direction: column;
+        margin:auto;
+        box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+        -webkit-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+        -moz-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+        border-radius: 20px;
+        width: 40%;
+        height: 30rem;
+    }
+    .form-group {
+        align-self: center;
+    }
+    .login-button {
+        align-self: center;
+    }
+}
+
+/*REGISTER STYLE*/
+
+h2 {
+    align-self: center;
+    color:#004489;
+    font-weight: bold;
+}
+.register-title {
+    text-align: center;
+    font-weight: bold;
+    margin: 0;
+}
+
+.register-form {
+    margin-left: 30px;
+}
+.logo-register {
+    align-self: center;
+    margin: 20px;
+    width: 250px;
+    height:4rem;
+}
+.register {
+    display: flex;
+    flex-direction: column;
+}
+/* Media Query Desktop */
+
+@media screen  and (min-width: 768px) {
+
+    .register {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        margin: auto;
+        box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+        -webkit-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+        -moz-box-shadow: 0px 1px 11px -1px rgba(30, 29, 29, 1);
+        border-radius: 20px;
+        width: 40%;
+        height: 30rem;
+    }
+
+    .register-form {
+        margin-left: 160px;
+    }
+    .submit-register {
+        margin-top: 25px;
+    }
+    .register-title {
+        align-self: center;
+        font-weight: bold;
+    }
+}
